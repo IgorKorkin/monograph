@@ -358,6 +358,12 @@ export default function App() {
           box-shadow: none;
           transition: transform 0.25s ease;
           transform-origin: center center;
+          cursor: pointer;
+        }
+
+        .cover:focus-visible {
+          outline: 2px solid var(--accent);
+          outline-offset: 6px;
         }
 
         .cover:hover {
@@ -755,8 +761,25 @@ export default function App() {
         <main>
           <section className="hero">
             <div className="container">
+
               <div className="book-strip" id="preview">
-                <figure className="cover cover--full">
+                <figure
+                  className="cover cover--full"
+                  role="link"
+                  tabIndex={0}
+                  onClick={() => window.open("https://znanium.ru/read?id=481477", "_blank", "noopener,noreferrer")}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      e.preventDefault();
+                      window.open("https://znanium.ru/read?id=481477", "_blank", "noopener,noreferrer");
+                    }
+                  }}
+                  aria-label={
+                    lang === "ru"
+                      ? "Открыть страницу монографии на Znanium"
+                      : "Open the monograph page on Znanium"
+                  }
+                >
                   <img
                     src={asset("cover-full.jpg")}
                     alt={
