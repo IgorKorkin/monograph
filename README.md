@@ -1,16 +1,12 @@
-# React + Vite
+# Monograph
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Kernel Protection of Operating Systems Under Countermeasures**  
+Website for Igor Korkin’s monograph on Windows kernel protection, hidden hypervisors, and low-level OS security research.
 
-Currently, two official plugins are available:
+**Live:** https://igorkorkin.github.io/monograph/  
+**Author:** https://igorkorkin.github.io/  
+**Publisher:** https://znanium.ru/read?id=481477
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+React · Vite · GitHub Pages · GitHub Actions
