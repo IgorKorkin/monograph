@@ -10,13 +10,13 @@ const content = {
       contents: "CONTENTS",
       author: "AUTHOR",
     },
-    badge: "OFFICIAL MONOGRAPH WEBSITE",
+    badge: "OS Security as a Science",
     subtitle:
       "Монография о защите ядра Windows от низкоуровневых угроз: скрытые гипервизоры, атаки драйверов, гипервизорные архитектуры защиты, мониторинг памяти и противодействие адаптирующимся нарушителям.",
-    by: "by Igor Korkin, Ph.D.",
+    by: "Игорь Коркин · кандидат технических наук",
     buttons: {
-      read: "READ ON ZNANIUM",
-      site: "AUTHOR'S SITE",
+      read: "чИТАТЬ НА ZNANIUM",
+      site: "САЙТ АВТОРА",
     },
     tags: [
       "Windows Kernel",
@@ -84,7 +84,7 @@ const content = {
       contents: "CONTENTS",
       author: "AUTHOR",
     },
-    badge: "OFFICIAL MONOGRAPH WEBSITE",
+    badge: "OS Security as a Science",
     subtitle:
       "A monograph on protection of the Windows kernel from low-level threats: hidden hypervisors, driver-based attacks, hypervisor-based defensive architectures, memory monitoring, and adversarial countermeasure analysis.",
     by: "by Igor Korkin, Ph.D.",
