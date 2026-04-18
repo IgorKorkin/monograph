@@ -5,19 +5,20 @@ const asset = (name) => `${import.meta.env.BASE_URL}${name}`;
 const content = {
   ru: {
     nav: {
-      about: "ABOUT",
-      preview: "PREVIEW",
-      contents: "CONTENTS",
-      author: "AUTHOR",
+      about: "О КНИГЕ",
+      preview: "ОБЛОЖКА",
+      contents: "СОДЕРЖАНИЕ",
+      author: "АВТОР",
     },
     badge: "OS Security as a Science",
     subtitle:
-      "Монография о защите ядра Windows от низкоуровневых угроз: скрытые гипервизоры, атаки драйверов, гипервизорные архитектуры защиты, мониторинг памяти и противодействие адаптирующимся нарушителям.",
+      "Монография о защите ядра Windows от низкоуровневых угроз: скрытых гипервизорах, атаках драйверов, гипервизорных архитектурах защиты и мониторинге памяти в условиях активного противодействия.",
     by: "Игорь Коркин · кандидат технических наук",
     buttons: {
       read: "ЧИТАТЬ НА ZNANIUM",
       site: "САЙТ АВТОРА",
     },
+    trustNote: "Опубликовано на платформе Znanium · доступно полное онлайн-ознакомление",
     tags: [
       "Windows Kernel",
       "VT-x / EPT",
@@ -34,27 +35,30 @@ const content = {
     sectionTitles: {
       about: "О монографии",
       topics: "Ключевые направления",
+      focus: "Практический фокус",
       author: "Об ",
       authorAccent: "авторе",
-      inside: "Inside the ",
-      insideAccent: "Book",
+      inside: "Внутри ",
+      insideAccent: "монографии",
     },
     aboutText:
-      "Монография посвящена защите ядра Windows от сложных низкоуровневых угроз. Исследование построено вокруг двух взаимосвязанных направлений: защиты памяти ядра от манипуляций со стороны драйверов и обнаружения скрытых гипервизоров, использующих аппаратную виртуализацию.",
+      "Монография посвящена защите ядра Windows от сложных низкоуровневых угроз. Исследование сосредоточено на двух взаимосвязанных направлениях: защите памяти ядра от манипуляций со стороны драйверов и обнаружении скрытых гипервизоров на базе аппаратной виртуализации.",
     topics: [
       "Архитектура ядра Windows и эволюция встроенных механизмов защиты.",
       "Техники сокрытия вредоносного кода, руткит-подходы и методы обнаружения.",
       "Гипервизорные технологии мониторинга и защиты памяти ядра.",
       "Выявление скрытых гипервизоров в условиях активного противодействия.",
     ],
+    focusText:
+      "Книга объединяет анализ угроз безопасности ядра Windows, гипервизорные методы защиты памяти и практические подходы к выявлению скрытых гипервизоров в условиях активного противодействия.",
     authorName: "Игорь Юрьевич Коркин",
-    authorRole: "RESEARCHER & AUTHOR",
+    authorRole: "ИССЛЕДОВАТЕЛЬ И АВТОР",
     authorBio:
-      "Кандидат технических наук, выпускник НИЯУ МИФИ. Исследователь и системный программист в области защиты операционных систем, гипервизоров и низкоуровневых киберугроз. Участник международных проектов в Huawei Technologies и Binarly. Автор более 50 научных работ, патента и международных докладов.",
+      "Кандидат технических наук, выпускник НИЯУ МИФИ. Исследователь и системный программист в области защиты операционных систем, гипервизоров и низкоуровневых киберугроз. Участник международных проектов в Huawei Technologies и Binarly, автор более 50 научных работ, патента и международных докладов.",
     authorTags: [
-      "OS Security Research",
-      "Hypervisors & Rootkits",
-      "Advanced Threats",
+      "Исследования безопасности ОС",
+      "Гипервизоры и руткиты",
+      "Продвинутые угрозы",
     ],
     insideCards: [
       {
@@ -70,7 +74,13 @@ const content = {
         text: "Методы обнаружения скрытых гипервизоров на основе анализа характеристик времени выполнения инструкций.",
       },
     ],
-    footerSite: "Author's Site",
+    footer: {
+      publisher: "Издатель",
+      site: "Сайт автора",
+      linkedin: "LinkedIn",
+      x: "X",
+      copyright: "© Igor Korkin",
+    },
   },
   en: {
     nav: {
@@ -81,12 +91,13 @@ const content = {
     },
     badge: "OS Security as a Science",
     subtitle:
-      "A monograph on protection of the Windows kernel from low-level threats: hidden hypervisors, driver-based attacks, hypervisor-based defensive architectures, memory monitoring, and adversarial countermeasure analysis.",
-    by: "by Igor Korkin, Ph.D.",
+      "A monograph on Windows kernel protection against low-level threats: hidden hypervisors, driver-based attacks, hypervisor-based defensive architectures, and memory monitoring under active countermeasures.",
+    by: "Igor Korkin · Ph.D.",
     buttons: {
       read: "READ ON ZNANIUM",
       site: "AUTHOR'S SITE",
     },
+    trustNote: "Published on Znanium · full online preview available",
     tags: [
       "Windows Kernel",
       "VT-x / EPT",
@@ -103,6 +114,7 @@ const content = {
     sectionTitles: {
       about: "About the monograph",
       topics: "Key topics",
+      focus: "Practical focus",
       author: "Meet the ",
       authorAccent: "Author",
       inside: "Inside the ",
@@ -116,10 +128,12 @@ const content = {
       "Hypervisor-based monitoring and kernel-memory protection.",
       "Detection of stealth hypervisors under active adversarial countermeasures.",
     ],
+    focusText:
+      "The book combines Windows kernel threat analysis, hypervisor-based memory protection, and practical approaches to detecting stealth hypervisors under active countermeasures.",
     authorName: "Igor Yurievich Korkin",
     authorRole: "RESEARCHER & AUTHOR",
     authorBio:
-      "Ph.D. in Cybersecurity, graduate of NRNU MEPhI. Security researcher and systems programmer specializing in operating-system protection, hypervisors, and low-level cyber threats. Participated in international projects at Huawei Technologies and Binarly. Author of 50+ scholarly works, a patent, and international conference talks.",
+      "Ph.D. in Cybersecurity, graduate of NRNU MEPhI. Security researcher and systems programmer specializing in operating-system protection, hypervisors, and low-level cyber threats. Participated in international projects at Huawei Technologies and Binarly and authored 50+ scholarly works, a patent, and international conference talks.",
     authorTags: [
       "OS Security Research",
       "Hypervisors & Rootkits",
@@ -139,7 +153,13 @@ const content = {
         text: "Detection of stealth hypervisors through statistical analysis of instruction execution time characteristics.",
       },
     ],
-    footerSite: "Author's Site",
+    footer: {
+      publisher: "Publisher",
+      site: "Author Site",
+      linkedin: "LinkedIn",
+      x: "X",
+      copyright: "© Igor Korkin",
+    },
   },
 };
 
@@ -408,19 +428,27 @@ export default function App() {
         }
 
         .hero-subtitle {
-          margin: 0 auto 22px;
-          max-width: 1040px;
+          margin: 0 auto 18px;
+          max-width: 980px;
           color: var(--text-soft);
-          font-size: clamp(1.04rem, 1.35vw, 1.28rem);
-          line-height: 1.9;
+          font-size: clamp(1.02rem, 1.28vw, 1.22rem);
+          line-height: 1.82;
         }
 
         .hero-by {
-          margin-bottom: 26px;
+          margin-bottom: 18px;
           font-family: var(--mono);
           font-size: 0.98rem;
           color: var(--text);
           font-weight: 600;
+        }
+
+        .hero-note {
+          margin: 16px auto 0;
+          max-width: 760px;
+          color: var(--text-soft);
+          font-size: 0.95rem;
+          line-height: 1.7;
         }
 
         .button-row {
@@ -544,7 +572,7 @@ export default function App() {
         .info-card li {
           color: var(--text-soft);
           font-size: 1rem;
-          line-height: 1.9;
+          line-height: 1.82;
         }
 
         .info-card ul {
@@ -590,6 +618,26 @@ export default function App() {
           margin: 0 auto;
         }
 
+        .author-card {
+          border-radius: 28px;
+          padding: 34px 28px 30px;
+          text-align: center;
+          transition:
+            transform 0.22s ease,
+            box-shadow 0.22s ease,
+            border-color 0.22s ease,
+            background 0.22s ease;
+        }
+
+        .author-card:hover {
+          transform: translateY(-2px);
+          border-color: rgba(72, 211, 255, 0.28);
+          box-shadow:
+            0 0 0 1px rgba(72, 211, 255, 0.10),
+            0 0 36px rgba(72, 211, 255, 0.10),
+            0 16px 42px rgba(0, 0, 0, 0.38);
+        }
+
         .author-photo-wrap {
           width: 132px;
           height: 132px;
@@ -598,6 +646,14 @@ export default function App() {
           padding: 3px;
           background: linear-gradient(180deg, rgba(72, 211, 255, 0.32), rgba(72, 211, 255, 0.08));
           box-shadow: 0 0 0 1px rgba(72, 211, 255, 0.08);
+          transition: box-shadow 0.22s ease, transform 0.22s ease;
+        }
+
+        .author-card:hover .author-photo-wrap {
+          box-shadow:
+            0 0 0 1px rgba(72, 211, 255, 0.16),
+            0 0 24px rgba(72, 211, 255, 0.16);
+          transform: translateY(-1px);
         }
 
         .author-photo {
@@ -623,48 +679,10 @@ export default function App() {
           text-transform: uppercase;
         }
 
-        .author-card {
-          border-radius: 28px;
-          padding: 34px 28px 30px;
-          text-align: center;
-          transition:
-          transform 0.22s ease,
-          box-shadow 0.22s ease,
-          border-color 0.22s ease,
-          background 0.22s ease;
-        }
-
-        .author-card:hover {
-          transform: translateY(-2px);
-          border-color: rgba(72, 211, 255, 0.28);
-          box-shadow:
-            0 0 0 1px rgba(72, 211, 255, 0.10),
-            0 0 36px rgba(72, 211, 255, 0.10),
-            0 16px 42px rgba(0, 0, 0, 0.38);
-        }
-
-        .author-photo-wrap {
-            width: 132px;
-            height: 132px;
-            margin: 0 auto 20px;
-            border-radius: 999px;
-            padding: 3px;
-            background: linear-gradient(180deg, rgba(72, 211, 255, 0.32), rgba(72, 211, 255, 0.08));
-            box-shadow: 0 0 0 1px rgba(72, 211, 255, 0.08);
-            transition: box-shadow 0.22s ease, transform 0.22s ease;
-          }
-
-          .author-card:hover .author-photo-wrap {
-            box-shadow:
-              0 0 0 1px rgba(72, 211, 255, 0.16),
-              0 0 24px rgba(72, 211, 255, 0.16);
-            transform: translateY(-1px);
-          }
-
         .author-bio {
           color: var(--text-soft);
-          font-size: 1rem;
-          line-height: 1.9;
+          font-size: 0.98rem;
+          line-height: 1.82;
           margin: 0 auto;
           max-width: 560px;
           text-align: center;
@@ -687,9 +705,6 @@ export default function App() {
           border: 1px solid rgba(108, 173, 214, 0.14);
           background: rgba(255, 255, 255, 0.03);
           color: var(--text-soft);
-          font-family: var(--mono);
-          font-size: 1.05rem;
-          font-weight: 700;
           transition: all 0.2s ease;
         }
 
@@ -700,26 +715,31 @@ export default function App() {
           transform: translateY(-1px);
         }
 
-
-
-
-
-        .author-card p {
-          color: var(--text-soft);
-          font-size: 0.98rem;
-          line-height: 1.85;
-        }
-
         .footer {
           padding: 44px 0 56px;
           text-align: center;
           color: var(--text-soft);
-          font-size: 1rem;
+          font-size: 0.96rem;
           line-height: 1.9;
+        }
+
+        .footer-links {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 14px;
+        }
+
+        .footer-links span {
+          opacity: 0.45;
         }
 
         .footer a {
           color: var(--accent);
+        }
+
+        .footer-copy {
+          margin-top: 10px;
         }
 
         @media (max-width: 1080px) {
@@ -824,7 +844,6 @@ export default function App() {
         <main>
           <section className="hero">
             <div className="container">
-
               <div className="book-strip" id="preview">
                 <figure
                   className="cover cover--full"
@@ -899,6 +918,8 @@ export default function App() {
                   </a>
                 </div>
 
+                <p className="hero-note">{t.trustNote}</p>
+
                 <div className="tag-row">
                   {t.tags.map((tag) => (
                     <span className="tag" key={tag}>
@@ -937,12 +958,8 @@ export default function App() {
                 </article>
 
                 <article className="info-card card">
-                  <h3>{t.sectionTitles.author === "Об " ? "Практический фокус" : "Practical focus"}</h3>
-                  <p>
-                    {lang === "ru"
-                      ? "Книга объединяет анализ угроз безопасности ядра Windows, гипервизорные методы защиты памяти и практические подходы к выявлению скрытых гипервизоров в условиях активного противодействия."
-                      : "The book combines Windows kernel threat analysis, hypervisor-based memory protection, and practical approaches to detecting stealth hypervisors under active countermeasures."}
-                  </p>
+                  <h3>{t.sectionTitles.focus}</h3>
+                  <p>{t.focusText}</p>
                 </article>
               </div>
             </div>
@@ -967,7 +984,6 @@ export default function App() {
           </section>
 
           <section className="section" id="author">
-
             <div className="container">
               <h2 className="author-section-title">
                 {t.sectionTitles.author}
@@ -1009,7 +1025,9 @@ export default function App() {
                       aria-label="X profile"
                       title="X"
                     >
-                      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                      </svg>
                     </a>
 
                     <a
@@ -1020,10 +1038,14 @@ export default function App() {
                       aria-label="LinkedIn profile"
                       title="LinkedIn"
                     >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                        <rect width="4" height="12" x="2" y="9" />
+                        <circle cx="4" cy="4" r="2" />
+                      </svg>
                     </a>
 
-                     <a
+                    <a
                       className="social-btn"
                       href="http://igorkorkin.github.io/"
                       target="_blank"
@@ -1031,23 +1053,38 @@ export default function App() {
                       aria-label="Website"
                       title="Website"
                     >
-                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                        <path d="M2 12h20" />
+                      </svg>
                     </a>
-
                   </div>
                 </article>
               </div>
-
-
-
             </div>
           </section>
 
           <footer className="footer">
             <div className="container">
-              <div>
-
+              <div className="footer-links">
+                <a href="https://znanium.ru/read?id=481477" target="_blank" rel="noopener noreferrer">
+                  {t.footer.publisher}
+                </a>
+                <span>·</span>
+                <a href="https://igorkorkin.github.io/" target="_blank" rel="noopener noreferrer">
+                  {t.footer.site}
+                </a>
+                <span>·</span>
+                <a href="https://www.linkedin.com/in/korkinigor/" target="_blank" rel="noopener noreferrer">
+                  {t.footer.linkedin}
+                </a>
+                <span>·</span>
+                <a href="https://x.com/igorkorkin" target="_blank" rel="noopener noreferrer">
+                  {t.footer.x}
+                </a>
               </div>
+              <div className="footer-copy">{t.footer.copyright}</div>
             </div>
           </footer>
         </main>
