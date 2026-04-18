@@ -15,7 +15,7 @@ const content = {
       "Монография о защите ядра Windows от низкоуровневых угроз: скрытые гипервизоры, атаки драйверов, гипервизорные архитектуры защиты, мониторинг памяти и противодействие адаптирующимся нарушителям.",
     by: "Игорь Коркин · кандидат технических наук",
     buttons: {
-      read: "чИТАТЬ НА ZNANIUM",
+      read: "ЧИТАТЬ НА ZNANIUM",
       site: "САЙТ АВТОРА",
     },
     tags: [
@@ -26,8 +26,8 @@ const content = {
       "BYOVD / Rootkits",
     ],
     stats: [
-      { value: "15+", label: "лет исследований и практической работы" },
-      { value: "50+", label: "научных работ, включая статьи, патент и доклады" },
+      { value: "15", label: "лет исследований и практической работы" },
+      { value: "50", label: "научных работ, включая статьи, патент и доклады" },
       { value: "30", label: "международных докладов на конференциях" },
       { value: "1", label: "монография, объединяющая авторскую исследовательскую линию" },
     ],
@@ -54,12 +54,9 @@ const content = {
     authorText2:
       "Автор более 50 научных работ, патента и докладов на международных конференциях по кибербезопасности в США, Европе, Азии и России. Научный руководитель дипломных и исследовательских работ студентов МИФИ по направлению «Информационная безопасность».",
     authorTags: [
-      "Kernel Security",
-      "Hypervisors",
-      "Memory Protection",
-      "VT-x / EPT",
-      "Binarly",
-      "MEPhI",
+      "OS Security Research",
+      "Hypervisors and Rootkits",
+      "Advanced Threats",
     ],
     insideCards: [
       {
@@ -100,8 +97,8 @@ const content = {
       "BYOVD / Rootkits",
     ],
     stats: [
-      { value: "15+", label: "years of research and practical work" },
-      { value: "50+", label: "scholarly works, including papers, a patent, and talks" },
+      { value: "15", label: "years of research and practical work" },
+      { value: "50", label: "scholarly works, including papers, a patent, and talks" },
       { value: "30", label: "international conference talks" },
       { value: "1", label: "monograph combining the author's research line" },
     ],
@@ -128,12 +125,9 @@ const content = {
     authorText2:
       "Author of more than 50 scholarly works, a patent, and talks at major international cybersecurity conferences across the US, Europe, Asia, and Russia. He also supervises student research at MEPhI in Information Security.",
     authorTags: [
-      "Kernel Security",
-      "Hypervisors",
-      "Memory Protection",
-      "VT-x / EPT",
-      "Binarly",
-      "MEPhI",
+      "OS Security Research",
+      "Hypervisors and Rootkits",
+      "Advanced Threats",
     ],
     insideCards: [
       {
