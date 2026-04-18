@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/cover-full.jpg" alt="Monograph cover" width="900" />
+  <img src="public/cover-full.webp" alt="Monograph cover" width="900" />
 </p>
 
 # Monograph
