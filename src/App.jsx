@@ -49,13 +49,11 @@ const content = {
     ],
     authorName: "Игорь Юрьевич Коркин",
     authorRole: "RESEARCHER & AUTHOR",
-    authorText1:
-      "Кандидат технических наук, выпускник НИЯУ МИФИ. Исследователь и системный программист в области защиты операционных систем, гипервизоров и низкоуровневых киберугроз. Участник международных проектов по кибербезопасности в Huawei Technologies и Binarly.",
-    authorText2:
-      "Автор более 50 научных работ, патента и докладов на международных конференциях по кибербезопасности в США, Европе, Азии и России. Научный руководитель дипломных и исследовательских работ студентов МИФИ по направлению «Информационная безопасность».",
+    authorBio:
+      "Кандидат технических наук, выпускник НИЯУ МИФИ. Исследователь и системный программист в области защиты операционных систем, гипервизоров и низкоуровневых киберугроз. Участник международных проектов в Huawei Technologies и Binarly. Автор более 50 научных работ, патента и международных докладов.",
     authorTags: [
       "OS Security Research",
-      "Hypervisors and Rootkits",
+      "Hypervisors & Rootkits",
       "Advanced Threats",
     ],
     insideCards: [
@@ -120,13 +118,11 @@ const content = {
     ],
     authorName: "Igor Yurievich Korkin",
     authorRole: "RESEARCHER & AUTHOR",
-    authorText1:
-      "Ph.D. in Engineering, graduate of NRNU MEPhI. Security researcher and systems programmer specializing in operating-system protection, hypervisors, and low-level cyber threats. Participated in international cybersecurity projects at Huawei Technologies and Binarly.",
-    authorText2:
-      "Author of more than 50 scholarly works, a patent, and talks at major international cybersecurity conferences across the US, Europe, Asia, and Russia. He also supervises student research at MEPhI in Information Security.",
+    authorBio:
+      "Ph.D. in Cybersecurity, graduate of NRNU MEPhI. Security researcher and systems programmer specializing in operating-system protection, hypervisors, and low-level cyber threats. Participated in international projects at Huawei Technologies and Binarly. Author of 50+ scholarly works, a patent, and international conference talks.",
     authorTags: [
       "OS Security Research",
-      "Hypervisors and Rootkits",
+      "Hypervisors & Rootkits",
       "Advanced Threats",
     ],
     insideCards: [
@@ -185,11 +181,9 @@ export default function App() {
           margin: 0;
           color: var(--text);
           background:
-            radial-gradient(circle at 50% 18%, rgba(72, 211, 255, 0.14), transparent 28%),
-            linear-gradient(to right, rgba(72, 211, 255, 0.05) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(72, 211, 255, 0.05) 1px, transparent 1px),
+            radial-gradient(circle at 50% 18%, rgba(72, 211, 255, 0.14), transparent 30%),
+            radial-gradient(circle at 50% 65%, rgba(72, 211, 255, 0.05), transparent 38%),
             #050a11;
-          background-size: auto, 52px 52px, 52px 52px, auto;
           font-family: var(--sans);
           min-height: 100vh;
           overflow-x: hidden;
@@ -211,11 +205,9 @@ export default function App() {
           inset: 0;
           pointer-events: none;
           background:
-            radial-gradient(circle at 50% 18%, rgba(72, 211, 255, 0.08), transparent 22%),
-            linear-gradient(to right, rgba(255,255,255,0.015), transparent 35%, rgba(255,255,255,0.015) 65%, transparent),
-            linear-gradient(to bottom, rgba(255,255,255,0.015), transparent 35%, rgba(255,255,255,0.015) 65%, transparent);
+            radial-gradient(circle at 50% 20%, rgba(72, 211, 255, 0.06), transparent 24%);
           mix-blend-mode: screen;
-          opacity: 0.7;
+          opacity: 0.75;
         }
 
         .container {
@@ -589,23 +581,19 @@ export default function App() {
         .author-single-wrap {
           display: flex;
           justify-content: center;
-        }
-
-        .author-card {
-          border-radius: 24px;
-          padding: 32px 28px;
-          text-align: center;
-        }
-
-        .author-card--single {
-          max-width: 760px;
           width: 100%;
         }
 
+        .author-card--single {
+          width: 100%;
+          max-width: 600px;
+          margin: 0 auto;
+        }
+
         .author-photo-wrap {
-          width: 108px;
-          height: 108px;
-          margin: 0 auto 18px;
+          width: 132px;
+          height: 132px;
+          margin: 0 auto 20px;
           border-radius: 999px;
           padding: 3px;
           background: linear-gradient(180deg, rgba(72, 211, 255, 0.32), rgba(72, 211, 255, 0.08));
@@ -623,17 +611,98 @@ export default function App() {
 
         .author-card h3 {
           margin: 0 0 12px;
-          font-size: 1.9rem;
+          font-size: 1.95rem;
         }
 
         .role {
-          margin: 0 0 20px;
+          margin: 0 0 22px;
           color: var(--accent);
           font-family: var(--mono);
-          font-size: 0.9rem;
-          letter-spacing: 0.22em;
+          font-size: 0.92rem;
+          letter-spacing: 0.20em;
           text-transform: uppercase;
         }
+
+        .author-card {
+          border-radius: 28px;
+          padding: 34px 28px 30px;
+          text-align: center;
+          transition:
+          transform 0.22s ease,
+          box-shadow 0.22s ease,
+          border-color 0.22s ease,
+          background 0.22s ease;
+        }
+
+        .author-card:hover {
+          transform: translateY(-2px);
+          border-color: rgba(72, 211, 255, 0.28);
+          box-shadow:
+            0 0 0 1px rgba(72, 211, 255, 0.10),
+            0 0 36px rgba(72, 211, 255, 0.10),
+            0 16px 42px rgba(0, 0, 0, 0.38);
+        }
+
+        .author-photo-wrap {
+            width: 132px;
+            height: 132px;
+            margin: 0 auto 20px;
+            border-radius: 999px;
+            padding: 3px;
+            background: linear-gradient(180deg, rgba(72, 211, 255, 0.32), rgba(72, 211, 255, 0.08));
+            box-shadow: 0 0 0 1px rgba(72, 211, 255, 0.08);
+            transition: box-shadow 0.22s ease, transform 0.22s ease;
+          }
+
+          .author-card:hover .author-photo-wrap {
+            box-shadow:
+              0 0 0 1px rgba(72, 211, 255, 0.16),
+              0 0 24px rgba(72, 211, 255, 0.16);
+            transform: translateY(-1px);
+          }
+
+        .author-bio {
+          color: var(--text-soft);
+          font-size: 1rem;
+          line-height: 1.9;
+          margin: 0 auto;
+          max-width: 560px;
+          text-align: center;
+        }
+
+        .social-row {
+          display: flex;
+          justify-content: center;
+          gap: 14px;
+          margin-top: 8px;
+        }
+
+        .social-btn {
+          width: 54px;
+          height: 54px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 14px;
+          border: 1px solid rgba(108, 173, 214, 0.14);
+          background: rgba(255, 255, 255, 0.03);
+          color: var(--text-soft);
+          font-family: var(--mono);
+          font-size: 1.05rem;
+          font-weight: 700;
+          transition: all 0.2s ease;
+        }
+
+        .social-btn:hover {
+          color: var(--accent);
+          border-color: rgba(72, 211, 255, 0.32);
+          background: rgba(72, 211, 255, 0.06);
+          transform: translateY(-1px);
+        }
+
+
+
+
 
         .author-card p {
           color: var(--text-soft);
@@ -898,6 +967,7 @@ export default function App() {
           </section>
 
           <section className="section" id="author">
+
             <div className="container">
               <h2 className="author-section-title">
                 {t.sectionTitles.author}
@@ -917,12 +987,11 @@ export default function App() {
                   <h3>{t.authorName}</h3>
                   <p className="role">{t.authorRole}</p>
 
-                  <p>{t.authorText1}</p>
-                  <p>{t.authorText2}</p>
+                  <p className="author-bio">{t.authorBio}</p>
 
                   <div
                     className="tag-row"
-                    style={{ justifyContent: "center", marginTop: 18 }}
+                    style={{ justifyContent: "center", marginTop: 18, marginBottom: 20 }}
                   >
                     {t.authorTags.map((tag) => (
                       <span className="tag" key={tag}>
@@ -930,22 +999,54 @@ export default function App() {
                       </span>
                     ))}
                   </div>
+
+                  <div className="social-row">
+                    <a
+                      className="social-btn"
+                      href="http://x.com/igorkorkin"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="X profile"
+                      title="X"
+                    >
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                    </a>
+
+                    <a
+                      className="social-btn"
+                      href="https://www.linkedin.com/in/korkinigor/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="LinkedIn profile"
+                      title="LinkedIn"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+
+                     <a
+                      className="social-btn"
+                      href="http://igorkorkin.github.io/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Website"
+                      title="Website"
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-globe"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                    </a>
+
+                  </div>
                 </article>
               </div>
+
+
+
             </div>
           </section>
 
           <footer className="footer">
             <div className="container">
               <div>
-                {t.footerSite}:{" "}
-                <a
-                  href="https://igorkorkin.github.io/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  igorkorkin.github.io
-                </a>
+
               </div>
             </div>
           </footer>
