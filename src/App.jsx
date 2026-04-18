@@ -18,7 +18,6 @@ const content = {
       read: "ЧИТАТЬ НА ZNANIUM",
       site: "САЙТ АВТОРА",
     },
-    trustNote: "Опубликовано на платформе Znanium · доступно полное онлайн-ознакомление",
     tags: [
       "Windows Kernel",
       "VT-x / EPT",
@@ -38,14 +37,14 @@ const content = {
       focus: "Практический фокус",
       author: "Об ",
       authorAccent: "авторе",
-      inside: "Внутри ",
+      inside: "Содержание ",
       insideAccent: "монографии",
     },
     aboutText:
-      "Монография посвящена защите ядра Windows от сложных низкоуровневых угроз. Исследование сосредоточено на двух взаимосвязанных направлениях: защите памяти ядра от манипуляций со стороны драйверов и обнаружении скрытых гипервизоров на базе аппаратной виртуализации.",
+      "Монография посвящена защите ядра Windows от сложных низкоуровневых угроз. Исследование сосредоточено на двух взаимосвязанных направлениях: защите памяти ядра от манипуляций со стороны драйверов и обнаружении скрытых гипервизоров, построенных на базе аппаратной виртуализации.",
     topics: [
-      "Архитектура ядра Windows и эволюция встроенных механизмов защиты.",
-      "Техники сокрытия вредоносного кода, руткит-подходы и методы обнаружения.",
+      "Архитектура ядра Windows и эволюция встроенных механизмов защиты ОС.",
+      "Анализ руткит-техникт и методов обнаружения с позиции безопасности.",
       "Гипервизорные технологии мониторинга и защиты памяти ядра.",
       "Выявление скрытых гипервизоров в условиях активного противодействия.",
     ],
@@ -75,11 +74,11 @@ const content = {
       },
     ],
     footer: {
-      publisher: "Издатель",
+      publisher: "Издательство",
       site: "Сайт автора",
       linkedin: "LinkedIn",
       x: "X",
-      copyright: "© Igor Korkin",
+      copyright: "",
     },
   },
   en: {
@@ -97,7 +96,6 @@ const content = {
       read: "READ ON ZNANIUM",
       site: "AUTHOR'S SITE",
     },
-    trustNote: "Published on Znanium · full online preview available",
     tags: [
       "Windows Kernel",
       "VT-x / EPT",
@@ -154,11 +152,11 @@ const content = {
       },
     ],
     footer: {
-      publisher: "Publisher",
+      publisher: "Published by INFRA-M",
       site: "Author Site",
       linkedin: "LinkedIn",
       x: "X",
-      copyright: "© Igor Korkin",
+      copyright: "",
     },
   },
 };
@@ -581,9 +579,9 @@ export default function App() {
         }
 
         .section-title {
-          margin: 0 0 28px;
+          margin: 0 0 24px;
           text-align: center;
-          font-size: clamp(2.2rem, 4.5vw, 3.45rem);
+          font-size: clamp(1.7rem, 3.2vw, 2.45rem);
           line-height: 1.12;
           font-weight: 700;
           letter-spacing: -0.03em;
@@ -1065,24 +1063,11 @@ export default function App() {
             </div>
           </section>
 
+          
+
           <footer className="footer">
             <div className="container">
-              <div className="footer-links">
-                <a href="https://znanium.ru/read?id=481477" target="_blank" rel="noopener noreferrer">
-                  {t.footer.publisher}
-                </a>
-                <span>·</span>
-                <a href="https://igorkorkin.github.io/" target="_blank" rel="noopener noreferrer">
-                  {t.footer.site}
-                </a>
-                <span>·</span>
-                <a href="https://www.linkedin.com/in/korkinigor/" target="_blank" rel="noopener noreferrer">
-                  {t.footer.linkedin}
-                </a>
-                <span>·</span>
-                <a href="https://x.com/igorkorkin" target="_blank" rel="noopener noreferrer">
-                  {t.footer.x}
-                </a>
+               <div className="footer-links">
               </div>
               <div className="footer-copy">{t.footer.copyright}</div>
             </div>
