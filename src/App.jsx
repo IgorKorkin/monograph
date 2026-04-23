@@ -2,6 +2,14 @@ import { useState } from "react";
 
 const asset = (name) => `${import.meta.env.BASE_URL}${name}`;
 
+const marketplaceLinks = {
+  infra:
+    "https://infra-m.ru/catalog/informatika_vychislitelnaya_tekhnika/zashchita_yadra_operatsionnykh_sistem_v_usloviyakh_protivodeystviya/",
+  ozon:
+    "https://www.ozon.ru/product/zashchita-yadra-operatsionnyh-sistem-v-usloviyah-protivodeystviya-4030175118/",
+  wb: "https://www.wildberries.ru/catalog/980328161/detail.aspx?targetUrl=GP",
+};
+
 const content = {
   ru: {
     nav: {
@@ -59,6 +67,12 @@ const content = {
       "Гипервизоры и руткиты",
       "Продвинутые угрозы",
     ],
+    marketplace: {
+      title: "Печатная версия книги доступна на маркетплейсах",
+      infra: "ИНФРА-М",
+      ozon: "Ozon",
+      wb: "Wildberries",
+    },
     insideCards: [
       {
         title: "Раздел 1",
@@ -137,6 +151,12 @@ const content = {
       "Hypervisors & Rootkits",
       "Advanced Threats",
     ],
+    marketplace: {
+      title: "The printed edition is available on major marketplaces",
+      infra: "INFRA-M",
+      ozon: "Ozon",
+      wb: "Wildberries",
+    },
     insideCards: [
       {
         title: "Part I",
@@ -713,6 +733,72 @@ export default function App() {
           transform: translateY(-1px);
         }
 
+        .social-btn:focus-visible,
+        .marketplace-link:focus-visible {
+          outline: 2px solid rgba(72, 211, 255, 0.72);
+          outline-offset: 4px;
+        }
+
+        .marketplace-panel {
+          margin-top: 22px;
+        }
+
+        .marketplace-title {
+          margin: 0 0 16px;
+          color: var(--text-soft);
+          font-family: var(--mono);
+          font-size: 0.8rem;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+        }
+
+        .marketplace-row {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 12px;
+        }
+
+        .marketplace-link {
+          min-width: 160px;
+          min-height: 58px;
+          padding: 12px 18px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 16px;
+          border: 1px solid rgba(108, 173, 214, 0.14);
+          background:
+            linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02)),
+            rgba(11, 17, 27, 0.72);
+          color: var(--text);
+          box-shadow: var(--shadow);
+          transition:
+            transform 0.2s ease,
+            border-color 0.2s ease,
+            background 0.2s ease,
+            box-shadow 0.2s ease;
+        }
+
+        .marketplace-link:hover {
+          transform: translateY(-1px);
+          border-color: rgba(72, 211, 255, 0.32);
+          background:
+            linear-gradient(180deg, rgba(72, 211, 255, 0.10), rgba(72, 211, 255, 0.03)),
+            rgba(11, 17, 27, 0.8);
+          box-shadow:
+            0 0 0 1px rgba(72, 211, 255, 0.08),
+            0 12px 32px rgba(0, 0, 0, 0.28);
+        }
+
+        .marketplace-link--text {
+          font-family: var(--mono);
+          font-size: 0.92rem;
+          font-weight: 600;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
+        }
+
         .footer {
           padding: 44px 0 56px;
           text-align: center;
@@ -786,6 +872,10 @@ export default function App() {
 
           .btn {
             min-width: 150px;
+            width: 100%;
+          }
+
+          .marketplace-link {
             width: 100%;
           }
 
@@ -914,6 +1004,45 @@ export default function App() {
                   >
                     {t.buttons.site}
                   </a>
+                </div>
+
+                <div className="marketplace-panel">
+                  <p className="marketplace-title">{t.marketplace.title}</p>
+
+                  <div className="marketplace-row">
+                    <a
+                      className="marketplace-link marketplace-link--text"
+                      href={marketplaceLinks.infra}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={t.marketplace.infra}
+                      title={t.marketplace.infra}
+                    >
+                      <span>{t.marketplace.infra}</span>
+                    </a>
+
+                    <a
+                      className="marketplace-link marketplace-link--text"
+                      href={marketplaceLinks.ozon}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={t.marketplace.ozon}
+                      title={t.marketplace.ozon}
+                    >
+                      <span>{t.marketplace.ozon}</span>
+                    </a>
+
+                    <a
+                      className="marketplace-link marketplace-link--text"
+                      href={marketplaceLinks.wb}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={t.marketplace.wb}
+                      title={t.marketplace.wb}
+                    >
+                      <span>{t.marketplace.wb}</span>
+                    </a>
+                  </div>
                 </div>
 
                 <p className="hero-note">{t.trustNote}</p>
@@ -1058,6 +1187,7 @@ export default function App() {
                       </svg>
                     </a>
                   </div>
+
                 </article>
               </div>
             </div>
