@@ -8,6 +8,8 @@ const marketplaceLinks = {
   ozon:
     "https://www.ozon.ru/product/zashchita-yadra-operatsionnyh-sistem-v-usloviyah-protivodeystviya-4030175118/",
   wb: "https://www.wildberries.ru/catalog/980328161/detail.aspx?targetUrl=GP",
+  yandexMarket:
+    "https://market.yandex.ru/card/zashchita-yadra-operatsionnykh-sistem-v-usloviyakh-protivodeystviya-monografiyakorkin-i-yu-m-nits-infra-m2026-488-s16pereplet-7bts/5666301666?do-waremd5=cymUIlw809sRHomSS_s_NQ&nid=20598950&utm_medium=sharing&ogV=188&isComfortPlus=false",
 };
 
 const content = {
@@ -72,6 +74,7 @@ const content = {
       infra: "ИНФРА-М",
       ozon: "Ozon",
       wb: "Wildberries",
+      yandexMarket: "Yandex.Маркет",
     },
     insideCards: [
       {
@@ -156,6 +159,7 @@ const content = {
       infra: "INFRA-M",
       ozon: "Ozon",
       wb: "Wildberries",
+      yandexMarket: "Yandex.Market",
     },
     insideCards: [
       {
@@ -1041,6 +1045,17 @@ export default function App() {
                       title={t.marketplace.wb}
                     >
                       <span>{t.marketplace.wb}</span>
+                    </a>
+
+                    <a
+                      className="marketplace-link marketplace-link--text"
+                      href={marketplaceLinks.yandexMarket}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={t.marketplace.yandexMarket}
+                      title={t.marketplace.yandexMarket}
+                    >
+                      <span>{t.marketplace.yandexMarket}</span>
                     </a>
                   </div>
                 </div>
