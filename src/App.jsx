@@ -4,7 +4,7 @@ const asset = (name) => `${import.meta.env.BASE_URL}${name}`;
 
 const pdfReleaseUrl =
   "https://github.com/IgorKorkin/monograph/releases/download/monograph-2026/korkin-monograph.pdf";
-const pdfViewerUrl = asset("korkin-monograph.pdf");
+const pdfViewerUrl = asset("pdf-viewer.html");
 
 const marketplaceLinks = {
   infra:
