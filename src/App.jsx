@@ -2,6 +2,10 @@ import { useState } from "react";
 
 const asset = (name) => `${import.meta.env.BASE_URL}${name}`;
 
+const pdfReleaseUrl =
+  "https://github.com/IgorKorkin/monograph/releases/download/monograph-2026/korkin-monograph.pdf";
+const pdfViewerUrl = asset("korkin-monograph.pdf");
+
 const marketplaceLinks = {
   infra:
     "https://infra-m.ru/catalog/informatika_vychislitelnaya_tekhnika/zashchita_yadra_operatsionnykh_sistem_v_usloviyakh_protivodeystviya/",
@@ -26,6 +30,8 @@ const content = {
     by: "Игорь Коркин · кандидат технических наук",
     buttons: {
       read: "ЧИТАТЬ НА ZNANIUM",
+      openPdf: "ОТКРЫТЬ PDF",
+      downloadPdf: "СКАЧАТЬ PDF",
       site: "САЙТ АВТОРА",
     },
     tags: [
@@ -71,6 +77,7 @@ const content = {
     ],
     marketplace: {
       title: "Печатная версия книги доступна на маркетплейсах",
+      digitalTitle: "Электронная версия доступна бесплатно",
       infra: "ИНФРА-М",
       ozon: "Ozon",
       wb: "Wildberries",
@@ -111,6 +118,8 @@ const content = {
     by: "Igor Korkin · Ph.D.",
     buttons: {
       read: "READ ON ZNANIUM",
+      openPdf: "OPEN PDF",
+      downloadPdf: "DOWNLOAD PDF",
       site: "AUTHOR'S SITE",
     },
     tags: [
@@ -156,6 +165,7 @@ const content = {
     ],
     marketplace: {
       title: "The printed edition is available on major marketplaces",
+      digitalTitle: "Digital edition is available for free",
       infra: "INFRA-M",
       ozon: "Ozon",
       wb: "Wildberries",
@@ -747,6 +757,10 @@ export default function App() {
           margin-top: 22px;
         }
 
+        .marketplace-panel .button-row {
+          margin-bottom: 0;
+        }
+
         .marketplace-title {
           margin: 0 0 16px;
           color: var(--text-soft);
@@ -990,24 +1004,46 @@ export default function App() {
                 <p className="hero-subtitle">{t.subtitle}</p>
                 <div className="hero-by">{t.by}</div>
 
-                <div className="button-row">
-                  <a
-                    className="btn btn-primary"
-                    href="https://znanium.ru/read?id=481477"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {t.buttons.read}
-                  </a>
+                <div className="marketplace-panel">
+                  <p className="marketplace-title">{t.marketplace.digitalTitle}</p>
 
-                  <a
-                    className="btn"
-                    href="https://igorkorkin.github.io/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {t.buttons.site}
-                  </a>
+                  <div className="button-row">
+                    <a
+                      className="btn btn-primary"
+                      href="https://znanium.ru/read?id=481477"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {t.buttons.read}
+                    </a>
+
+                    <a
+                      className="btn btn-primary"
+                      href={pdfViewerUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {t.buttons.openPdf}
+                    </a>
+
+                    <a
+                      className="btn btn-primary"
+                      href={pdfReleaseUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {t.buttons.downloadPdf}
+                    </a>
+
+                    <a
+                      className="btn"
+                      href="https://igorkorkin.github.io/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {t.buttons.site}
+                    </a>
+                  </div>
                 </div>
 
                 <div className="marketplace-panel">
