@@ -131,7 +131,7 @@
       }
 
       .citation-static h2 {
-        margin: 0 0 7px;
+        margin: 0 0 12px;
         color: #48d3ff;
         font-family: "JetBrains Mono", monospace;
         font-size: 0.92rem;
@@ -139,13 +139,6 @@
         letter-spacing: 0.18em;
         line-height: 1.35;
         text-transform: uppercase;
-      }
-
-      .citation-static p {
-        margin: 0 0 14px;
-        color: #aab6c8;
-        font-size: 0.95rem;
-        line-height: 1.6;
       }
 
       .citation-static-grid {
@@ -164,19 +157,9 @@
       .citation-static-head {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: flex-end;
         gap: 12px;
-        margin-bottom: 10px;
-      }
-
-      .citation-static h3 {
-        margin: 0;
-        color: #48d3ff;
-        font-family: "JetBrains Mono", monospace;
-        font-size: 0.82rem;
-        font-weight: 600;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
+        margin-bottom: 8px;
       }
 
       .citation-copy {
@@ -295,14 +278,10 @@
 
     <section class="citation-static" id="citation" aria-labelledby="citation-title">
       <h2 id="citation-title">Как цитировать</h2>
-      <p>
-        Готовые варианты библиографической ссылки для статей, обзоров, экспертных заключений и научных материалов.
-      </p>
 
       <div class="citation-static-grid">
         <article class="citation-static-card">
           <div class="citation-static-head">
-            <h3>На русском</h3>
             <button class="citation-copy" type="button" data-copy-target="citation-ru">Copy</button>
           </div>
           <textarea id="citation-ru" readonly>Коркин, И. Ю. Защита ядра операционных систем в условиях противодействия : монография / И. Ю. Коркин. — Москва : ИНФРА-М, 2026. — 488 с. — ISBN 978-5-16-021527-3. — DOI 10.12737/2228735. — EDN MMFTWR. — URL: https://znanium.ru/catalog/product/2228735 (дата обращения: 07.07.2026). — Текст : электронный.</textarea>
@@ -311,7 +290,6 @@
 
         <article class="citation-static-card">
           <div class="citation-static-head">
-            <h3>In English</h3>
             <button class="citation-copy" type="button" data-copy-target="citation-en">Copy</button>
           </div>
           <textarea id="citation-en" readonly>Korkin, I. Yu. Protection of the Core of Operating Systems in the Face of Counteraction : monograph / I. Yu. Korkin. — Moscow : INFRA-M, 2026. — 488 p. — ISBN 978-5-16-021527-3. — DOI 10.12737/2228735. — EDN MMFTWR. — URL: https://znanium.ru/catalog/product/2228735 (accessed: 07.07.2026). — Text : electronic.</textarea>
