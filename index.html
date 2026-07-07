@@ -118,41 +118,47 @@
 
     <style>
       .citation-static {
-        width: min(1280px, calc(100% - 48px));
-        margin: 0 auto 56px;
-        padding: 30px;
+        width: min(960px, 100%);
+        margin: 26px auto 8px;
+        padding: 18px 20px 20px;
         border: 1px solid rgba(108, 173, 214, 0.14);
-        border-radius: 24px;
-        background: rgba(8, 16, 28, 0.72);
-        box-shadow: 0 0 0 1px rgba(108, 173, 214, 0.10), 0 12px 40px rgba(0, 0, 0, 0.35);
+        border-radius: 18px;
+        background: rgba(8, 16, 28, 0.50);
+        box-shadow: 0 0 0 1px rgba(108, 173, 214, 0.06), 0 10px 28px rgba(0, 0, 0, 0.24);
         color: #e7eef8;
         font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        text-align: left;
       }
 
       .citation-static h2 {
-        margin: 0 0 12px;
-        color: #e7eef8;
-        font-size: clamp(1.7rem, 3.2vw, 2.45rem);
-        line-height: 1.12;
+        margin: 0 0 7px;
+        color: #48d3ff;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.92rem;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        line-height: 1.35;
+        text-transform: uppercase;
       }
 
       .citation-static p {
-        margin: 0 0 18px;
+        margin: 0 0 14px;
         color: #aab6c8;
-        line-height: 1.7;
+        font-size: 0.95rem;
+        line-height: 1.6;
       }
 
       .citation-static-grid {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 18px;
+        grid-template-columns: 1fr;
+        gap: 12px;
       }
 
       .citation-static-card {
-        padding: 18px;
-        border: 1px solid rgba(108, 173, 214, 0.14);
-        border-radius: 18px;
-        background: rgba(11, 17, 27, 0.72);
+        padding: 14px;
+        border: 1px solid rgba(108, 173, 214, 0.12);
+        border-radius: 14px;
+        background: rgba(11, 17, 27, 0.58);
       }
 
       .citation-static-head {
@@ -160,80 +166,80 @@
         align-items: center;
         justify-content: space-between;
         gap: 12px;
-        margin-bottom: 12px;
+        margin-bottom: 10px;
       }
 
       .citation-static h3 {
         margin: 0;
         color: #48d3ff;
-        font-size: 1rem;
-        letter-spacing: 0.08em;
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.82rem;
+        font-weight: 600;
+        letter-spacing: 0.14em;
         text-transform: uppercase;
       }
 
       .citation-copy {
-        min-height: 40px;
-        padding: 0 14px;
-        border: 1px solid rgba(72, 211, 255, 0.28);
-        border-radius: 12px;
-        background: rgba(8, 16, 28, 0.72);
+        min-height: 34px;
+        padding: 0 12px;
+        border: 1px solid rgba(72, 211, 255, 0.24);
+        border-radius: 10px;
+        background: rgba(8, 16, 28, 0.64);
         color: #48d3ff;
         font: inherit;
-        font-size: 0.9rem;
+        font-size: 0.86rem;
         cursor: pointer;
       }
 
       .citation-copy:hover {
-        border-color: rgba(72, 211, 255, 0.45);
+        border-color: rgba(72, 211, 255, 0.42);
       }
 
       .citation-static textarea {
         width: 100%;
-        min-height: 190px;
+        min-height: 120px;
         resize: vertical;
-        padding: 12px;
-        border: 1px solid rgba(108, 173, 214, 0.18);
-        border-radius: 14px;
-        background: rgba(5, 10, 17, 0.86);
+        padding: 11px 12px;
+        border: 1px solid rgba(108, 173, 214, 0.16);
+        border-radius: 12px;
+        background: rgba(5, 10, 17, 0.78);
         color: #e7eef8;
         font: inherit;
+        font-size: 0.95rem;
         line-height: 1.55;
       }
 
       .citation-source-links {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 18px;
+        gap: 8px;
+        margin-top: 12px;
       }
 
       .citation-source-links a {
         display: inline-flex;
-        min-height: 42px;
+        min-height: 36px;
         align-items: center;
-        padding: 0 14px;
-        border: 1px solid rgba(108, 173, 214, 0.14);
-        border-radius: 12px;
-        background: rgba(255, 255, 255, 0.03);
+        padding: 0 11px;
+        border: 1px solid rgba(108, 173, 214, 0.13);
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.025);
         color: #48d3ff;
+        font-size: 0.88rem;
         text-decoration: none;
       }
 
       .citation-status {
-        min-height: 22px;
-        margin: 8px 0 0;
+        min-height: 20px;
+        margin: 7px 0 0;
         color: #aab6c8;
-        font-size: 0.9rem;
+        font-size: 0.86rem;
       }
 
       @media (max-width: 840px) {
         .citation-static {
-          width: min(100% - 24px, 1280px);
-          padding: 22px;
-        }
-
-        .citation-static-grid {
-          grid-template-columns: 1fr;
+          width: 100%;
+          padding: 16px;
         }
       }
     </style>
@@ -317,20 +323,46 @@
     </section>
 
     <script>
-      document.querySelectorAll("[data-copy-target]").forEach((button) => {
-        button.addEventListener("click", async () => {
-          const target = document.getElementById(button.dataset.copyTarget);
-          const status = button.closest(".citation-static-card").querySelector(".citation-status");
-          try {
-            await navigator.clipboard.writeText(target.value);
-            status.textContent = "Copied.";
-          } catch (error) {
-            target.focus();
-            target.select();
-            status.textContent = "Select and copy manually.";
+      (function initCitationBlock() {
+        const setupCopyButtons = () => {
+          document.querySelectorAll("[data-copy-target]").forEach((button) => {
+            button.addEventListener("click", async () => {
+              const target = document.getElementById(button.dataset.copyTarget);
+              const status = button.closest(".citation-static-card").querySelector(".citation-status");
+              try {
+                await navigator.clipboard.writeText(target.value);
+                status.textContent = "Copied.";
+              } catch (error) {
+                target.focus();
+                target.select();
+                status.textContent = "Select and copy manually.";
+              }
+            });
+          });
+        };
+
+        const placeCitationBlock = () => {
+          const citation = document.getElementById("citation");
+          const heroText = document.querySelector(".hero-text");
+          const panels = heroText ? heroText.querySelectorAll(".marketplace-panel") : [];
+
+          if (citation && panels.length > 0) {
+            panels[panels.length - 1].after(citation);
+            return true;
           }
-        });
-      });
+
+          return false;
+        };
+
+        const waitAndPlace = () => {
+          if (!placeCitationBlock()) {
+            window.requestAnimationFrame(waitAndPlace);
+          }
+        };
+
+        setupCopyButtons();
+        waitAndPlace();
+      })();
     </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
