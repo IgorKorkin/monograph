@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 
 pdf/korkin-monograph.pdf
+
+playwright-report/
+test-results/
