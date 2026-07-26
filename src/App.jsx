@@ -11,9 +11,10 @@ const marketplaceLinks = {
     "https://infra-m.ru/catalog/informatika_vychislitelnaya_tekhnika/zashchita_yadra_operatsionnykh_sistem_v_usloviyakh_protivodeystviya/",
   ozon:
     "https://www.ozon.ru/product/zashchita-yadra-operatsionnyh-sistem-v-usloviyah-protivodeystviya-4030175118/",
-  wb: "https://www.wildberries.ru/catalog/980328161/detail.aspx?targetUrl=GP",
+  wb: "https://www.wildberries.ru/catalog/980328161/detail.aspx?targetUrl=GP",  
   yandexMarket:
     "https://market.yandex.ru/card/zashchita-yadra-operatsionnykh-sistem-v-usloviyakh-protivodeystviya-monografiyakorkin-i-yu-m-nits-infra-m2026-488-s16pereplet-7bts/5666301666?do-waremd5=cymUIlw809sRHomSS_s_NQ&nid=20598950&utm_medium=sharing&ogV=188&isComfortPlus=false",
+  amazon: "https://www.amazon.com/dp/B0HBG3PRKC",
 };
 
 const content = {
@@ -76,12 +77,13 @@ const content = {
       "Продвинутые угрозы",
     ],
     marketplace: {
-      title: "Печатная версия книги доступна на маркетплейсах",
+      title: "Книга доступна на маркетплейсах",
       digitalTitle: "Электронная версия доступна бесплатно",
       infra: "ИНФРА-М",
       ozon: "Ozon",
       wb: "Wildberries",
       yandexMarket: "Yandex.Маркет",
+      amazon: "Amazon",
     },
     insideCards: [
       {
@@ -164,12 +166,13 @@ const content = {
       "Advanced Threats",
     ],
     marketplace: {
-      title: "The printed edition is available on major marketplaces",
+      title: "The book is available on major marketplaces",
       digitalTitle: "Digital edition is available for free",
       infra: "INFRA-M",
       ozon: "Ozon",
       wb: "Wildberries",
       yandexMarket: "Yandex.Market",
+      amazon: "Amazon",
     },
     insideCards: [
       {
@@ -1093,6 +1096,18 @@ export default function App() {
                     >
                       <span>{t.marketplace.yandexMarket}</span>
                     </a>
+
+                    <a
+                      className="marketplace-link marketplace-link--text"
+                      href={marketplaceLinks.amazon}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={t.marketplace.amazon}
+                      title={t.marketplace.amazon}
+                    >
+                      <span>{t.marketplace.amazon}</span>
+                    </a>
+
                   </div>
                 </div>
 
