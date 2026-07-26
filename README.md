@@ -1,9 +1,23 @@
 <p align="center">
   <a href="https://igorkorkin.github.io/">
-    <img src="https://img.shields.io/badge/Main_Page-igorkorkin.github.io-0969DA?logo=githubpages&logoColor=white" alt="Main Page" />
+    <img
+      src="https://img.shields.io/badge/Main_Page-igorkorkin.github.io-0969DA?logo=githubpages&logoColor=white"
+      alt="Main Page"
+    />
   </a>
-  <a href="https://github.com/IgorKorkin/monograph/actions/workflows/deploy.yml">
-    <img src="https://github.com/IgorKorkin/monograph/actions/workflows/deploy.yml/badge.svg?branch=main" alt="GitHub Pages" />
+
+  <a href="https://github.com/IgorKorkin/monograph/actions/workflows/ci.yml">
+    <img
+      src="https://github.com/IgorKorkin/monograph/actions/workflows/ci.yml/badge.svg?branch=main&event=push"
+      alt="CI"
+    />
+  </a>
+
+  <a href="https://github.com/IgorKorkin/monograph/deployments/github-pages">
+    <img
+      src="https://img.shields.io/github/deployments/IgorKorkin/monograph/github-pages?label=GitHub%20Pages&logo=githubpages"
+      alt="GitHub Pages deployment"
+    />
   </a>
 </p>
 
