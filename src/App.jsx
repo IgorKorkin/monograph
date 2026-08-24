@@ -80,6 +80,7 @@ const content = {
     marketplace: {
       title: "Книга доступна на маркетплейсах",
       digitalTitle: "Электронная версия доступна бесплатно",
+      soldOut: "ПЕЧАТНЫЙ ТИРАЖ РАСПРОДАН",
       infra: "ИНФРА-М",
       ozon: "Ozon",
       wb: "Wildberries",
@@ -169,6 +170,7 @@ const content = {
     marketplace: {
       title: "The book is available on major marketplaces",
       digitalTitle: "Digital edition is available for free",
+      soldOut: "PRINT EDITION SOLD OUT",
       infra: "INFRA-M",
       ozon: "Ozon",
       wb: "Wildberries",
@@ -1080,7 +1082,7 @@ export default function App() {
                 <div className="marketplace-panel">
                   <div className="marketplace-title marketplace-title--sold-out">
                     <span className="marketplace-title-text">{t.marketplace.title}</span>
-                    <span className="sold-out">SOLD OUT!</span>
+                    <span className="sold-out">{t.marketplace.soldOut}</span>
                   </div>
 
                   <div className="marketplace-row">
