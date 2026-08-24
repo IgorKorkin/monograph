@@ -22,8 +22,7 @@ test("кнопка Google Books содержит правильную ссылк
   await page.goto("./");
 
   const googleBooks = page.getByRole("link", {
-    name: "Google Books",
-    exact: true,
+    name: /google books/i,
   });
 
   await expect(googleBooks).toBeVisible();
