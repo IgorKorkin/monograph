@@ -31,6 +31,7 @@ const content = {
     by: "Игорь Коркин · кандидат технических наук",
     buttons: {
       read: "ЧИТАТЬ НА ZNANIUM",
+      googleBooks: "GOOGLE BOOKS",
       openPdf: "ОТКРЫТЬ PDF",
       downloadPdf: "СКАЧАТЬ PDF",
       site: "САЙТ АВТОРА",
@@ -83,7 +84,6 @@ const content = {
       ozon: "Ozon",
       wb: "Wildberries",
       yandexMarket: "Yandex.Маркет",
-      googleBooks: "Google Books",
     },
     insideCards: [
       {
@@ -120,6 +120,7 @@ const content = {
     by: "Igor Korkin · Ph.D.",
     buttons: {
       read: "READ ON ZNANIUM",
+      googleBooks: "GOOGLE BOOKS",
       openPdf: "OPEN PDF",
       downloadPdf: "DOWNLOAD PDF",
       site: "AUTHOR'S SITE",
@@ -172,7 +173,6 @@ const content = {
       ozon: "Ozon",
       wb: "Wildberries",
       yandexMarket: "Yandex.Market",
-      googleBooks: "Google Books",
     },
     insideCards: [
       {
@@ -1041,6 +1041,15 @@ export default function App() {
 
                     <a
                       className="btn btn-primary"
+                      href={marketplaceLinks.googleBooks}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {t.buttons.googleBooks}
+                    </a>
+
+                    <a
+                      className="btn btn-primary"
                       href={pdfViewerUrl}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -1117,17 +1126,6 @@ export default function App() {
                       title={t.marketplace.yandexMarket}
                     >
                       <span>{t.marketplace.yandexMarket}</span>
-                    </a>
-
-                    <a
-                      className="marketplace-link marketplace-link--text"
-                      href={marketplaceLinks.googleBooks}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={t.marketplace.googleBooks}
-                      title={t.marketplace.googleBooks}
-                    >
-                      <span>{t.marketplace.googleBooks}</span>
                     </a>
 
                   </div>
