@@ -14,7 +14,7 @@ const marketplaceLinks = {
   wb: "https://www.wildberries.ru/catalog/980328161/detail.aspx?targetUrl=GP",  
   yandexMarket:
     "https://market.yandex.ru/card/zashchita-yadra-operatsionnykh-sistem-v-usloviyakh-protivodeystviya-monografiyakorkin-i-yu-m-nits-infra-m2026-488-s16pereplet-7bts/5666301666?do-waremd5=cymUIlw809sRHomSS_s_NQ&nid=20598950&utm_medium=sharing&ogV=188&isComfortPlus=false",
-  amazon: "https://www.amazon.com/dp/B0HBG3PRKC",
+  googleBooks: "https://books.google.ru/books/about?id=sJD1EQAAQBAJ",
 };
 
 const content = {
@@ -31,6 +31,7 @@ const content = {
     by: "Игорь Коркин · кандидат технических наук",
     buttons: {
       read: "ЧИТАТЬ НА ZNANIUM",
+      googleBooks: "GOOGLE BOOKS",
       openPdf: "ОТКРЫТЬ PDF",
       downloadPdf: "СКАЧАТЬ PDF",
       site: "САЙТ АВТОРА",
@@ -79,11 +80,11 @@ const content = {
     marketplace: {
       title: "Книга доступна на маркетплейсах",
       digitalTitle: "Электронная версия доступна бесплатно",
+      soldOut: "ПЕЧАТНЫЙ ТИРАЖ РАСПРОДАН",
       infra: "ИНФРА-М",
       ozon: "Ozon",
       wb: "Wildberries",
       yandexMarket: "Yandex.Маркет",
-      amazon: "Amazon",
     },
     insideCards: [
       {
@@ -120,6 +121,7 @@ const content = {
     by: "Igor Korkin · Ph.D.",
     buttons: {
       read: "READ ON ZNANIUM",
+      googleBooks: "GOOGLE BOOKS",
       openPdf: "OPEN PDF",
       downloadPdf: "DOWNLOAD PDF",
       site: "AUTHOR'S SITE",
@@ -168,11 +170,11 @@ const content = {
     marketplace: {
       title: "The book is available on major marketplaces",
       digitalTitle: "Digital edition is available for free",
+      soldOut: "PRINT EDITION SOLD OUT",
       infra: "INFRA-M",
       ozon: "Ozon",
       wb: "Wildberries",
       yandexMarket: "Yandex.Market",
-      amazon: "Amazon",
     },
     insideCards: [
       {
@@ -773,6 +775,25 @@ export default function App() {
           text-transform: uppercase;
         }
 
+        .marketplace-title--sold-out {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+          flex-wrap: wrap;
+        }
+
+        .marketplace-title-text {
+          text-decoration: line-through;
+          text-decoration-thickness: 1px;
+        }
+
+        .sold-out {
+          color: #ff6b6b;
+          font-weight: 700;
+          text-decoration: none;
+        }
+
         .marketplace-row {
           display: flex;
           justify-content: center;
@@ -1022,6 +1043,15 @@ export default function App() {
 
                     <a
                       className="btn btn-primary"
+                      href={marketplaceLinks.googleBooks}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {t.buttons.googleBooks}
+                    </a>
+
+                    <a
+                      className="btn btn-primary"
                       href={pdfViewerUrl}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -1050,7 +1080,10 @@ export default function App() {
                 </div>
 
                 <div className="marketplace-panel">
-                  <p className="marketplace-title">{t.marketplace.title}</p>
+                  <div className="marketplace-title marketplace-title--sold-out">
+                    <span className="marketplace-title-text">{t.marketplace.title}</span>
+                    <span className="sold-out">{t.marketplace.soldOut}</span>
+                  </div>
 
                   <div className="marketplace-row">
                     <a
@@ -1095,17 +1128,6 @@ export default function App() {
                       title={t.marketplace.yandexMarket}
                     >
                       <span>{t.marketplace.yandexMarket}</span>
-                    </a>
-
-                    <a
-                      className="marketplace-link marketplace-link--text"
-                      href={marketplaceLinks.amazon}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={t.marketplace.amazon}
-                      title={t.marketplace.amazon}
-                    >
-                      <span>{t.marketplace.amazon}</span>
                     </a>
 
                   </div>

@@ -107,12 +107,12 @@
           "https://doi.org/10.12737/2228735",
           "https://znanium.ru/catalog/product/2228735",
           "https://znanium.ru/read?id=481477",
+          "https://books.google.ru/books/about?id=sJD1EQAAQBAJ",
           "https://igorkorkin.github.io/monograph/korkin-monograph.pdf",
           "https://github.com/IgorKorkin/monograph/releases/download/monograph-2026/korkin-monograph.pdf",
-          "https://www.ozon.ru/product/zashchita-yadra-operatsionnyh-sistem-v-usloviyah-protivodeystviya-4030175118/",
+          "https://www.ozon.ru/product/zashchita-yadra-operatsionnyh-sistem-v-usloviyakh-protivodeystviya-4030175118/",
           "https://www.wildberries.ru/catalog/980328161/detail.aspx?targetUrl=GP",
-          "https://market.yandex.ru/card/zashchita-yadra-operatsionnykh-sistem-v-usloviyakh-protivodeystviya-monografiyakorkin-i-yu-m-nits-infra-m2026-488-s16pereplet-7bts/5666301666",
-          "https://www.amazon.com/dp/B0HBG3PRKC"
+          "https://market.yandex.ru/card/zashchita-yadra-operatsionnykh-sistem-v-usloviyakh-protivodeystviya-monografiyakorkin-i-yu-m-nits-infra-m2026-488-s16pereplet-7bts/5666301666"
         ]
       }
     </script>
@@ -263,19 +263,21 @@
           безопасности операционных систем, гипервизоров и низкоуровневых киберугроз.
         </p>
         <p>
-          Электронная версия доступна бесплатно.
+          Электронная версия доступна бесплатно на ZNANIUM, Google Books и в PDF.
         </p>
         <p>
-          Печатная версия книги доступна в ИНФРА-М, Ozon, Wildberries и Yandex.Маркет.
+          <s>Печатная версия книги доступна в ИНФРА-М, Ozon, Wildberries и Yandex.Маркет.</s>
+          <strong>ПЕЧАТНЫЙ ТИРАЖ РАСПРОДАН</strong>
         </p>
         <nav aria-label="Ссылки на книгу">
           <a href="https://znanium.ru/read?id=481477">Читать на ZNANIUM</a>
+          <a href="https://books.google.ru/books/about?id=sJD1EQAAQBAJ">Google Books</a>
           <a href="/monograph/korkin-monograph.pdf">Открыть PDF</a>
           <a href="https://github.com/IgorKorkin/monograph/releases/download/monograph-2026/korkin-monograph.pdf">Скачать PDF</a>
           <a href="https://elibrary.ru/item.asp?id=91614175">eLIBRARY</a>
           <a href="https://doi.org/10.12737/2228735">DOI</a>
           <a href="https://infra-m.ru/catalog/informatika_vychislitelnaya_tekhnika/zashchita_yadra_operatsionnykh_sistem_v_usloviyakh_protivodeystviya/">ИНФРА-М</a>
-          <a href="https://www.ozon.ru/product/zashchita-yadra-operatsionnyh-sistem-v-usloviyah-protivodeystviya-4030175118/">Ozon</a>
+          <a href="https://www.ozon.ru/product/zashchita-yadra-operatsionnyh-sistem-v-usloviyakh-protivodeystviya-4030175118/">Ozon</a>
           <a href="https://www.wildberries.ru/catalog/980328161/detail.aspx?targetUrl=GP">Wildberries</a>
           <a href="https://market.yandex.ru/card/zashchita-yadra-operatsionnykh-sistem-v-usloviyakh-protivodeystviya-monografiyakorkin-i-yu-m-nits-infra-m2026-488-s16pereplet-7bts/5666301666?do-waremd5=cymUIlw809sRHomSS_s_NQ&amp;nid=20598950&amp;utm_medium=sharing&amp;ogV=188&amp;isComfortPlus=false">Yandex.Маркет</a>
         </nav>
@@ -318,6 +320,7 @@
             button.addEventListener("click", async () => {
               const target = document.getElementById(button.dataset.copyTarget);
               const status = button.closest(".citation-static-card").querySelector(".citation-status");
+
               try {
                 await navigator.clipboard.writeText(target.value);
                 status.textContent = "Copied.";

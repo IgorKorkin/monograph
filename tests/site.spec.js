@@ -18,21 +18,20 @@ test("главная страница открывается без JavaScript-�
   expect(pageErrors).toEqual([]);
 });
 
-test("кнопка Amazon содержит правильную ссылку", async ({ page }) => {
+test("кнопка Google Books содержит правильную ссылку", async ({ page }) => {
   await page.goto("./");
 
-  const amazon = page.getByRole("link", {
-    name: "Amazon",
-    exact: true,
+  const googleBooks = page.getByRole("link", {
+    name: /google books/i,
   });
 
-  await expect(amazon).toBeVisible();
-  await expect(amazon).toHaveAttribute(
+  await expect(googleBooks).toBeVisible();
+  await expect(googleBooks).toHaveAttribute(
     "href",
-    "https://www.amazon.com/dp/B0HBG3PRKC",
+    "https://books.google.ru/books/about?id=sJD1EQAAQBAJ",
   );
-  await expect(amazon).toHaveAttribute("target", "_blank");
-  await expect(amazon).toHaveAttribute(
+  await expect(googleBooks).toHaveAttribute("target", "_blank");
+  await expect(googleBooks).toHaveAttribute(
     "rel",
     /noopener noreferrer/,
   );
