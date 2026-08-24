@@ -14,7 +14,7 @@ const marketplaceLinks = {
   wb: "https://www.wildberries.ru/catalog/980328161/detail.aspx?targetUrl=GP",  
   yandexMarket:
     "https://market.yandex.ru/card/zashchita-yadra-operatsionnykh-sistem-v-usloviyakh-protivodeystviya-monografiyakorkin-i-yu-m-nits-infra-m2026-488-s16pereplet-7bts/5666301666?do-waremd5=cymUIlw809sRHomSS_s_NQ&nid=20598950&utm_medium=sharing&ogV=188&isComfortPlus=false",
-  amazon: "https://www.amazon.com/dp/B0HBG3PRKC",
+  googleBooks: "https://books.google.ru/books/about?id=sJD1EQAAQBAJ",
 };
 
 const content = {
@@ -83,7 +83,7 @@ const content = {
       ozon: "Ozon",
       wb: "Wildberries",
       yandexMarket: "Yandex.Маркет",
-      amazon: "Amazon",
+      googleBooks: "Google Books",
     },
     insideCards: [
       {
@@ -172,7 +172,7 @@ const content = {
       ozon: "Ozon",
       wb: "Wildberries",
       yandexMarket: "Yandex.Market",
-      amazon: "Amazon",
+      googleBooks: "Google Books",
     },
     insideCards: [
       {
@@ -773,6 +773,25 @@ export default function App() {
           text-transform: uppercase;
         }
 
+        .marketplace-title--sold-out {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+          flex-wrap: wrap;
+        }
+
+        .marketplace-title-text {
+          text-decoration: line-through;
+          text-decoration-thickness: 1px;
+        }
+
+        .sold-out {
+          color: #ff6b6b;
+          font-weight: 700;
+          text-decoration: none;
+        }
+
         .marketplace-row {
           display: flex;
           justify-content: center;
@@ -1050,7 +1069,10 @@ export default function App() {
                 </div>
 
                 <div className="marketplace-panel">
-                  <p className="marketplace-title">{t.marketplace.title}</p>
+                  <div className="marketplace-title marketplace-title--sold-out">
+                    <span className="marketplace-title-text">{t.marketplace.title}</span>
+                    <span className="sold-out">SOLD OUT!</span>
+                  </div>
 
                   <div className="marketplace-row">
                     <a
@@ -1099,13 +1121,13 @@ export default function App() {
 
                     <a
                       className="marketplace-link marketplace-link--text"
-                      href={marketplaceLinks.amazon}
+                      href={marketplaceLinks.googleBooks}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={t.marketplace.amazon}
-                      title={t.marketplace.amazon}
+                      aria-label={t.marketplace.googleBooks}
+                      title={t.marketplace.googleBooks}
                     >
-                      <span>{t.marketplace.amazon}</span>
+                      <span>{t.marketplace.googleBooks}</span>
                     </a>
 
                   </div>
