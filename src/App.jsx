@@ -993,7 +993,7 @@ export default function App() {
                   }
                 >
                   <img
-                    src={asset("cover-full.webp")}
+                    src={asset("og-cover.webp")}
                     alt={
                       lang === "ru"
                         ? "Полная обложка монографии с корешком"
