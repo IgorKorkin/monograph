@@ -1210,7 +1210,7 @@ export default function App() {
                   <div className="author-photo-wrap">
                     <img
                       className="author-photo"
-                      src={asset("igor.korkin.photo.jpg")}
+                      src={asset("igor.korkin.photo.webp")}
                       alt={lang === "ru" ? "Фотография Игоря Коркина" : "Photo of Igor Korkin"}
                     />
                   </div>
