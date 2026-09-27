@@ -224,6 +224,7 @@ export default function App() {
           src: url("${asset("conthrax-sb.ttf")}") format("truetype");
           font-weight: 600;
           font-style: normal;
+          font-display: swap;
         }
 
         * {
@@ -995,6 +996,7 @@ export default function App() {
                   <img
                     src={asset("og-cover-800.webp")}
                     srcSet={`
+                       ${asset("og-cover-600.webp")} 600w,
                       ${asset("og-cover-800.webp")} 800w,
                       ${asset("og-cover-1600.webp")} 1600w
                     `}
