@@ -1003,7 +1003,11 @@ export default function App() {
                     sizes="(max-width: 700px) 92vw, 800px"
                     width="800"
                     height="544"
-                    alt="Игорь Коркин — Защита ядра операционных систем в условиях противодействия, монография"
+                    alt={
+                      lang === "ru"
+                        ? "Игорь Коркин — Защита ядра операционных систем в условиях противодействия, монография"
+                        : "Igor Korkin — Kernel Protection of Operating Systems Under Countermeasures, monograph"
+                    }
                     fetchpriority="high"
                   />
                 </figure>
