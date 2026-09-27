@@ -995,10 +995,6 @@ export default function App() {
                 >
                   <img
                     src="/monograph/og-cover-800.webp"
-                    srcset="
-                      /monograph/og-cover-600.webp 600w,
-                      /monograph/og-cover-800.webp 800w,
-                      /monograph/og-cover-1600.webp 1600w
                     srcSet="
                       /monograph/og-cover-600.webp 600w,
                       /monograph/og-cover-800.webp 800w,
