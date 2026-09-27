@@ -999,16 +999,16 @@ export default function App() {
                       /monograph/og-cover-600.webp 600w,
                       /monograph/og-cover-800.webp 800w,
                       /monograph/og-cover-1600.webp 1600w
+                    srcSet="
+                      /monograph/og-cover-600.webp 600w,
+                      /monograph/og-cover-800.webp 800w,
+                      /monograph/og-cover-1600.webp 1600w
                     "
                     sizes="(max-width: 700px) 92vw, 800px"
                     width="800"
                     height="544"
-                    alt={
-                      lang === "ru"
-                        ? "Игорь Коркин — Защита ядра операционных систем в условиях противодействия, монография"
-                        : "Igor Korkin — Kernel Protection of Operating Systems Under Countermeasures, monograph"
-                    }
-                    fetchpriority="high"
+                    alt="Игорь Коркин — Защита ядра операционных систем в условиях противодействия, монография"
+                    fetchPriority="high"
                   />
                 </figure>
               </div>
