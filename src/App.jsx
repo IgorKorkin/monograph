@@ -993,19 +993,21 @@ export default function App() {
                       : "Open the monograph page on Znanium"
                   }
                 >
-                  <img
-                    src="/monograph/og-cover-800.webp"
-                    srcSet="
-                      /monograph/og-cover-600.webp 600w,
-                      /monograph/og-cover-800.webp 800w,
-                      /monograph/og-cover-1600.webp 1600w
-                    "
-                    sizes="(max-width: 700px) 92vw, 800px"
-                    width="800"
-                    height="544"
-                    alt="Игорь Коркин — Защита ядра операционных систем в условиях противодействия, монография"
-                    fetchPriority="high"
-                  />
+                  <noscript>                 
+                    <img
+                      src="/monograph/og-cover-800.webp"
+                      srcSet="
+                        /monograph/og-cover-600.webp 600w,
+                        /monograph/og-cover-800.webp 800w,
+                        /monograph/og-cover-1600.webp 1600w
+                      "
+                      sizes="(max-width: 700px) 92vw, 800px"
+                      width="800"
+                      height="544"
+                      alt="Игорь Коркин — Защита ядра операционных систем в условиях противодействия, монография"
+                      fetchPriority="high"
+                    />
+                  </noscript>
                 </figure>
               </div>
 
