@@ -1006,9 +1006,9 @@ export default function App() {
                     fetchPriority="high"
                     alt={
                       lang === "ru"
-                        ? "Полная обложка монографии с корешком"
-                        : "Full monograph cover with spine"
-                    }
+                        ? "Игорь Коркин — Защита ядра операционных систем в условиях противодействия, монография"
+                        : "Igor Korkin — Kernel Protection of Operating Systems Under Countermeasures, monograph"
+                    }                    
                   />
                 </figure>
               </div>
