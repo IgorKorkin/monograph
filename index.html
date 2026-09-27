@@ -46,7 +46,7 @@
     <link rel="icon" href="/monograph/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/monograph/apple-touch-icon.png" />
 
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="book" />
     <meta property="og:locale" content="ru_RU" />
     <meta property="og:site_name" content="OS Security as a Science" />
     <meta
@@ -60,6 +60,14 @@
     <meta property="og:url" content="https://igorkorkin.github.io/monograph/" />
     <meta property="og:image" content="https://igorkorkin.github.io/monograph/og-cover.webp" />
     <meta property="og:image:alt" content="Обложка монографии Игоря Коркина" />
+    <meta property="book:author" content="https://igorkorkin.github.io/" />
+    <meta property="book:isbn" content="978-5-16-021527-3" />
+    <meta property="book:release_date" content="2026" />
+    <meta property="book:tag" content="Operating System Security" />
+    <meta property="book:tag" content="Windows Security" />
+    <meta property="book:tag" content="Windows Kernel" />
+    <meta property="book:tag" content="Hypervisor Security" />
+    <meta property="book:tag" content="Rootkit Detection" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta
@@ -73,48 +81,95 @@
     <meta name="twitter:image" content="https://igorkorkin.github.io/monograph/og-cover.webp" />
 
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Book",
-        "name": "Защита ядра операционных систем в условиях противодействия",
-        "alternateName": "Kernel Protection of Operating Systems Under Countermeasures",
-        "description": "Монография Игоря Коркина о защите ядра Windows от низкоуровневых угроз: скрытых гипервизоров, атак драйверов, гипервизорных архитектур защиты и мониторинга памяти.",
-        "inLanguage": "ru",
-        "isbn": "978-5-16-021527-3",
-        "identifier": [
-          "eLIBRARY ID: 91614175",
-          "EDN: MMFTWR",
-          "DOI: 10.12737/2228735"
-        ],
-        "author": {
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
           "@type": "Person",
-          "name": "Игорь Юрьевич Коркин",
-          "alternateName": "Igor Yurievich Korkin",
-          "url": "https://igorkorkin.github.io/"
+          "@id": "https://igorkorkin.github.io/#person",
+          "name": "Igor Korkin",
+          "alternateName": [
+            "IgorKorkin",
+            "Igor Yurievich Korkin",
+            "Korkin Igor Yurievich",
+            "Игорь Юрьевич Коркин",
+            "Коркин Игорь Юрьевич",
+            "Игорь Коркин"
+          ],
+          "url": "https://igorkorkin.github.io/",
+          "image": "https://igorkorkin.github.io/igor.korkin.photo.jpg",
+          "description": "Operating-system security researcher specializing in Windows kernel protection, hypervisors, memory forensics, rootkit detection, ETW, WMI and ALPC security.",
+          "jobTitle": "Operating System Security Researcher",
+          "knowsAbout": [
+            "Operating System Security",
+            "Windows Kernel Security",
+            "Windows Internals",
+            "Hypervisors",
+            "Memory Forensics",
+            "Rootkit Detection",
+            "ETW",
+            "WMI",
+            "ALPC"
+          ],
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "National Research Nuclear University MEPhI"
+          },
+          "sameAs": [
+            "https://github.com/IgorKorkin",
+            "https://scholar.google.com/citations?user=0RJh3vYAAAAJ",
+            "https://orcid.org/0000-0001-7640-2792",
+            "https://www.linkedin.com/in/igor-korkin/",
+            "https://www.researchgate.net/profile/Igor-Korkin-2",
+            "https://arxiv.org/a/korkin_i_1.html",
+            "https://dblp.uni-trier.de/pers/hd/k/Korkin:Igor",
+            "https://www.scopus.com/authid/detail.uri?authorId=57219459633",
+            "https://www.webofscience.com/wos/author/record/294131",
+            "https://ieeexplore.ieee.org/author/37088908930"
+          ]
         },
-        "publisher": {
-          "@type": "Organization",
-          "name": "ИНФРА-М",
-          "url": "https://infra-m.ru/"
-        },
-        "datePublished": "2026",
-        "bookFormat": "https://schema.org/Paperback",
-        "numberOfPages": 488,
-        "image": "https://igorkorkin.github.io/monograph/og-cover.webp",
-        "url": "https://igorkorkin.github.io/monograph/",
-        "sameAs": [
-          "https://elibrary.ru/item.asp?id=91614175",
-          "https://doi.org/10.12737/2228735",
-          "https://znanium.ru/catalog/product/2228735",
-          "https://znanium.ru/read?id=481477",
-          "https://books.google.ru/books/about?id=sJD1EQAAQBAJ",
-          "https://igorkorkin.github.io/monograph/korkin-monograph.pdf",
-          "https://github.com/IgorKorkin/monograph/releases/download/monograph-2026/korkin-monograph.pdf",
-          "https://www.ozon.ru/product/zashchita-yadra-operatsionnyh-sistem-v-usloviyakh-protivodeystviya-4030175118/",
-          "https://www.wildberries.ru/catalog/980328161/detail.aspx?targetUrl=GP",
-          "https://market.yandex.ru/card/zashchita-yadra-operatsionnykh-sistem-v-usloviyakh-protivodeystviya-monografiyakorkin-i-yu-m-nits-infra-m2026-488-s16pereplet-7bts/5666301666"
-        ]
-      }
+        {
+          "@type": "Book",
+          "@id": "https://igorkorkin.github.io/monograph/#book",
+          "name": "Защита ядра операционных систем в условиях противодействия",
+          "alternateName": "Kernel Protection of Operating Systems Under Countermeasures",
+          "description": "Монография Игоря Коркина о защите ядра Windows от низкоуровневых угроз: скрытых гипервизоров, атак драйверов, гипервизорных архитектур защиты и мониторинга памяти.",
+          "inLanguage": "ru",
+          "isbn": "978-5-16-021527-3",
+          "identifier": [
+            "eLIBRARY ID: 91614175",
+            "EDN: MMFTWR",
+            "DOI: 10.12737/2228735"
+          ],
+          "author": {
+            "@id": "https://igorkorkin.github.io/#person"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "ИНФРА-М",
+            "url": "https://infra-m.ru/"
+          },
+          "datePublished": "2026",
+          "bookFormat": "https://schema.org/Paperback",
+          "numberOfPages": 488,
+          "image": "https://igorkorkin.github.io/monograph/og-cover.webp",
+          "url": "https://igorkorkin.github.io/monograph/",
+          "mainEntityOfPage": "https://igorkorkin.github.io/monograph/",
+          "sameAs": [
+            "https://elibrary.ru/item.asp?id=91614175",
+            "https://doi.org/10.12737/2228735",
+            "https://znanium.ru/catalog/product/2228735",
+            "https://znanium.ru/read?id=481477",
+            "https://books.google.ru/books/about?id=sJD1EQAAQBAJ",
+            "https://igorkorkin.github.io/monograph/korkin-monograph.pdf",
+            "https://github.com/IgorKorkin/monograph/releases/download/monograph-2026/korkin-monograph.pdf",
+            "https://www.ozon.ru/product/zashchita-yadra-operatsionnyh-sistem-v-usloviyah-protivodeystviya-4030175118/",
+            "https://www.wildberries.ru/catalog/980328161/detail.aspx?targetUrl=GP",
+            "https://market.yandex.ru/card/zashchita-yadra-operatsionnykh-sistem-v-usloviyakh-protivodeystviya-monografiyakorkin-i-yu-m-nits-infra-m2026-488-s16pereplet-7bts/5666301666"
+          ]
+        }
+      ]
+    }
     </script>
 
     <style>
@@ -292,7 +347,7 @@
           <div class="citation-static-head">
             <button class="citation-copy" type="button" data-copy-target="citation-ru">Copy</button>
           </div>
-          <textarea id="citation-ru" rows="3" readonly>Коркин, И. Ю. Защита ядра операционных систем в условиях противодействия : монография / И. Ю. Коркин. — Москва : ИНФРА-М, 2026. — 488 с. — ISBN 978-5-16-021527-3. — DOI: 10.12737/2228735. — EDN: MMFTWR</textarea>
+          <textarea id="citation-ru" aria-label="Цитирование монографии на русском языке" rows="3" readonly>Коркин, И. Ю. Защита ядра операционных систем в условиях противодействия : монография / И. Ю. Коркин. — Москва : ИНФРА-М, 2026. — 488 с. — ISBN 978-5-16-021527-3. — DOI: 10.12737/2228735. — EDN: MMFTWR</textarea>
           <p class="citation-status" aria-live="polite"></p>
         </article>
 
@@ -300,7 +355,7 @@
           <div class="citation-static-head">
             <button class="citation-copy" type="button" data-copy-target="citation-en">Copy</button>
           </div>
-          <textarea id="citation-en" rows="3" readonly>Korkin, I. Yu. (2026). Kernel Protection of Operating Systems Under Countermeasures. Moscow, INFRA-M. ISBN 978-5-16-021527-3. — DOI: 10.12737/2228735</textarea>
+          <textarea id="citation-en" aria-label="Monograph citation in English" rows="3" readonly>Korkin, I. Yu. (2026). Kernel Protection of Operating Systems Under Countermeasures. Moscow, INFRA-M. ISBN 978-5-16-021527-3. — DOI: 10.12737/2228735</textarea>
           <p class="citation-status" aria-live="polite"></p>
         </article>
       </div>
