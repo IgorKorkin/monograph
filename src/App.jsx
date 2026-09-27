@@ -992,8 +992,7 @@ export default function App() {
                       ? "Открыть страницу монографии на Znanium"
                       : "Open the monograph page on Znanium"
                   }
-                >
-                  <noscript>                 
+                >            
                     <img
                       src="/monograph/og-cover-800.webp"
                       srcSet="
@@ -1007,7 +1006,6 @@ export default function App() {
                       alt="Игорь Коркин — Защита ядра операционных систем в условиях противодействия, монография"
                       fetchPriority="high"
                     />
-                  </noscript>
                 </figure>
               </div>
 
