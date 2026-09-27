@@ -1,88 +1,74 @@
 <!doctype html>
 <html lang="ru">
-  <head>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LD6Z5H92Y7"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-LD6Z5H92Y7');
-    </script>
-    <!-- Google tag (gtag.js) -->
+<head>
 
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){
-            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108660171', 'ym');
-    
-        ym(108660171, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-    </script>    
-    <!-- /Yandex.Metrika counter -->
-    
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LD6Z5H92Y7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-    <title>Защита ядра операционных систем в условиях противодействия — монография Игоря Коркина</title>
-    <meta
-      name="description"
-      content="Монография Игоря Коркина о защите ядра Windows: скрытые гипервизоры, атаки драйверов, гипервизорные архитектуры защиты, мониторинг памяти и противодействие адаптирующимся нарушителям. Готовая ссылка для цитирования на русском и английском языках."
-    />
-    <meta
-      name="keywords"
-      content="защита ядра Windows, безопасность ОС, гипервизоры, VT-x, EPT, скрытые гипервизоры, BYOVD, мониторинг памяти, Igor Korkin, монография, eLIBRARY, EDN MMFTWR, DOI 10.12737/2228735"
-    />
-    <meta name="author" content="Igor Korkin" />
-    <meta name="robots" content="index, follow, max-image-preview:large" />
+    gtag('config', 'G-LD6Z5H92Y7');
+  </script>
+  <!-- Google tag (gtag.js) -->
 
-    <link rel="canonical" href="https://igorkorkin.github.io/monograph/" />
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function (m, e, t, r, i, k, a) {
+      m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+      m[i].l = 1 * new Date();
+      for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+      k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+    })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=108660171', 'ym');
 
-    <link rel="icon" href="/monograph/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/monograph/apple-touch-icon.png" />
+    ym(108660171, 'init', { ssr: true, webvisor: true, clickmap: true, ecommerce: "dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce: true, trackLinks: true });
+  </script>
+  <!-- /Yandex.Metrika counter -->
 
-    <meta property="og:type" content="book" />
-    <meta property="og:locale" content="ru_RU" />
-    <meta property="og:site_name" content="OS Security as a Science" />
-    <meta
-      property="og:title"
-      content="Защита ядра операционных систем в условиях противодействия"
-    />
-    <meta
-      property="og:description"
-      content="Монография Игоря Коркина о защите ядра Windows, скрытых гипервизорах, атаках драйверов и системах защиты на основе гипервизоров."
-    />
-    <meta property="og:url" content="https://igorkorkin.github.io/monograph/" />
-    <meta property="og:image" content="https://igorkorkin.github.io/monograph/og-cover-1600.webp" />
-    <meta property="og:image:secure_url" content="https://igorkorkin.github.io/monograph/og-cover-1600.webp" />
-    <meta property="og:image:type" content="image/webp" /> 
-    <meta property="og:image:alt" content="Игорь Коркин — Защита ядра операционных систем в условиях противодействия" />
-    <meta name="twitter:image" content="https://igorkorkin.github.io/monograph/og-cover-1600.webp" /> 
-    <meta name="twitter:image:alt" content="Игорь Коркин — Защита ядра операционных систем в условиях противодействия" />
-    <meta property="book:author" content="https://igorkorkin.github.io/" />
-    <meta property="book:isbn" content="978-5-16-021527-3" />
-    <meta property="book:tag" content="Operating System Security" />
-    <meta property="book:tag" content="Windows Security" />
-    <meta property="book:tag" content="Windows Kernel" />
-    <meta property="book:tag" content="Hypervisor Security" />
-    <meta property="book:tag" content="Rootkit Detection" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Защита ядра операционных систем в условиях противодействия"
-    />
-    <meta
-      name="twitter:description"
-      content="Монография о защите ядра Windows от низкоуровневых угроз."
-    />
+  <title>Защита ядра операционных систем в условиях противодействия — монография Игоря Коркина</title>
+  <meta name="description"
+    content="Монография Игоря Коркина о защите ядра Windows: скрытые гипервизоры, атаки драйверов, гипервизорные архитектуры защиты, мониторинг памяти и противодействие адаптирующимся нарушителям. Готовая ссылка для цитирования на русском и английском языках." />
+  <meta name="keywords"
+    content="защита ядра Windows, безопасность ОС, гипервизоры, VT-x, EPT, скрытые гипервизоры, BYOVD, мониторинг памяти, Igor Korkin, монография, eLIBRARY, EDN MMFTWR, DOI 10.12737/2228735" />
+  <meta name="author" content="Igor Korkin" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
 
-    <script type="application/ld+json">
+  <link rel="canonical" href="https://igorkorkin.github.io/monograph/" />
+
+  <link rel="icon" href="/monograph/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/monograph/apple-touch-icon.png" />
+
+  <meta property="og:type" content="book" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:site_name" content="OS Security as a Science" />
+  <meta property="og:title" content="Защита ядра операционных систем в условиях противодействия" />
+  <meta property="og:description"
+    content="Монография Игоря Коркина о защите ядра Windows, скрытых гипервизорах, атаках драйверов и системах защиты на основе гипервизоров." />
+  <meta property="og:url" content="https://igorkorkin.github.io/monograph/" />
+  <meta property="og:image" content="https://igorkorkin.github.io/monograph/og-cover-1600.webp" />
+  <meta property="og:image:secure_url" content="https://igorkorkin.github.io/monograph/og-cover-1600.webp" />
+  <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:alt" content="Игорь Коркин — Защита ядра операционных систем в условиях противодействия" />
+  <meta name="twitter:image" content="https://igorkorkin.github.io/monograph/og-cover-1600.webp" />
+  <meta name="twitter:image:alt" content="Игорь Коркин — Защита ядра операционных систем в условиях противодействия" />
+  <meta property="book:author" content="https://igorkorkin.github.io/" />
+  <meta property="book:isbn" content="978-5-16-021527-3" />
+  <meta property="book:tag" content="Operating System Security" />
+  <meta property="book:tag" content="Windows Security" />
+  <meta property="book:tag" content="Windows Kernel" />
+  <meta property="book:tag" content="Hypervisor Security" />
+  <meta property="book:tag" content="Rootkit Detection" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Защита ядра операционных систем в условиях противодействия" />
+  <meta name="twitter:description" content="Монография о защите ядра Windows от низкоуровневых угроз." />
+
+  <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
@@ -196,252 +182,255 @@
     }
     </script>
 
-    <style>
+  <style>
+    .citation-static {
+      width: min(960px, 100%);
+      margin: 24px auto 8px;
+      padding: 14px 18px 16px;
+      border: 1px solid rgba(108, 173, 214, 0.14);
+      border-radius: 18px;
+      background: rgba(8, 16, 28, 0.50);
+      box-shadow: 0 0 0 1px rgba(108, 173, 214, 0.06), 0 10px 28px rgba(0, 0, 0, 0.24);
+      color: #e7eef8;
+      font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      text-align: left;
+    }
+
+    .citation-static h2 {
+      margin: 0 0 9px;
+      color: #48d3ff;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      line-height: 1.35;
+      text-transform: uppercase;
+    }
+
+    .citation-static-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .citation-static-card {
+      padding: 11px;
+      border: 1px solid rgba(108, 173, 214, 0.12);
+      border-radius: 14px;
+      background: rgba(11, 17, 27, 0.58);
+    }
+
+    .citation-static-head {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-bottom: 6px;
+    }
+
+    .citation-copy {
+      min-height: 30px;
+      padding: 0 11px;
+      border: 1px solid rgba(72, 211, 255, 0.24);
+      border-radius: 9px;
+      background: rgba(8, 16, 28, 0.64);
+      color: #48d3ff;
+      font: inherit;
+      font-size: 0.84rem;
+      cursor: pointer;
+    }
+
+    .citation-copy:hover {
+      border-color: rgba(72, 211, 255, 0.42);
+    }
+
+    .citation-static textarea {
+      width: 100%;
+      min-height: 0;
+      resize: vertical;
+      padding: 9px 11px;
+      border: 1px solid rgba(108, 173, 214, 0.16);
+      border-radius: 12px;
+      background: rgba(5, 10, 17, 0.78);
+      color: #e7eef8;
+      font: inherit;
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    .citation-source-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .citation-source-links a {
+      display: inline-flex;
+      min-height: 34px;
+      align-items: center;
+      padding: 0 10px;
+      border: 1px solid rgba(108, 173, 214, 0.13);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.025);
+      color: #48d3ff;
+      font-size: 0.86rem;
+      text-decoration: none;
+    }
+
+    .citation-status {
+      min-height: 0;
+      margin: 4px 0 0;
+      color: #aab6c8;
+      font-size: 0.76rem;
+      line-height: 1.25;
+    }
+
+    .citation-status:empty {
+      display: none;
+    }
+
+    @media (max-width: 840px) {
       .citation-static {
-        width: min(960px, 100%);
-        margin: 24px auto 8px;
-        padding: 14px 18px 16px;
-        border: 1px solid rgba(108, 173, 214, 0.14);
-        border-radius: 18px;
-        background: rgba(8, 16, 28, 0.50);
-        box-shadow: 0 0 0 1px rgba(108, 173, 214, 0.06), 0 10px 28px rgba(0, 0, 0, 0.24);
-        color: #e7eef8;
-        font-family: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        text-align: left;
-      }
-
-      .citation-static h2 {
-        margin: 0 0 9px;
-        color: #48d3ff;
-        font-family: "JetBrains Mono", monospace;
-        font-size: 0.9rem;
-        font-weight: 600;
-        letter-spacing: 0.18em;
-        line-height: 1.35;
-        text-transform: uppercase;
-      }
-
-      .citation-static-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 10px;
-      }
-
-      .citation-static-card {
-        padding: 11px;
-        border: 1px solid rgba(108, 173, 214, 0.12);
-        border-radius: 14px;
-        background: rgba(11, 17, 27, 0.58);
-      }
-
-      .citation-static-head {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 12px;
-        margin-bottom: 6px;
-      }
-
-      .citation-copy {
-        min-height: 30px;
-        padding: 0 11px;
-        border: 1px solid rgba(72, 211, 255, 0.24);
-        border-radius: 9px;
-        background: rgba(8, 16, 28, 0.64);
-        color: #48d3ff;
-        font: inherit;
-        font-size: 0.84rem;
-        cursor: pointer;
-      }
-
-      .citation-copy:hover {
-        border-color: rgba(72, 211, 255, 0.42);
-      }
-
-      .citation-static textarea {
         width: 100%;
-        min-height: 0;
-        resize: vertical;
-        padding: 9px 11px;
-        border: 1px solid rgba(108, 173, 214, 0.16);
-        border-radius: 12px;
-        background: rgba(5, 10, 17, 0.78);
-        color: #e7eef8;
-        font: inherit;
-        font-size: 0.95rem;
-        line-height: 1.55;
+        padding: 14px;
       }
-
-      .citation-source-links {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 10px;
-      }
-
-      .citation-source-links a {
-        display: inline-flex;
-        min-height: 34px;
-        align-items: center;
-        padding: 0 10px;
-        border: 1px solid rgba(108, 173, 214, 0.13);
-        border-radius: 10px;
-        background: rgba(255, 255, 255, 0.025);
-        color: #48d3ff;
-        font-size: 0.86rem;
-        text-decoration: none;
-      }
-
-      .citation-status {
-        min-height: 0;
-        margin: 4px 0 0;
-        color: #aab6c8;
-        font-size: 0.76rem;
-        line-height: 1.25;
-      }
-
-      .citation-status:empty {
-        display: none;
-      }
-
-      @media (max-width: 840px) {
-        .citation-static {
-          width: 100%;
-          padding: 14px;
-        }
-      }
-    </style>
+    }
+  </style>
 
 
-  </head>
-  <body>
-    <noscript>
-      <div>
-        <img
-          src="https://mc.yandex.ru/watch/108660171"
-          style="position:absolute; left:-9999px;"
-          alt=""
-        />
-        <img
-          src="/monograph/og-cover-800.webp"
-          width="800"
-          height="544"
-          alt="Игорь Коркин — Защита ядра операционных систем в условиях противодействия, монография"
-          style="max-width:100%; height:auto;"
-        />
-      </div>
-    </noscript>
-    <div id="root">
-      <main>        
-        <h1>Защита ядра операционных систем в условиях противодействия</h1>
-        <p>
-          Монография Игоря Юрьевича Коркина о защите ядра Windows от низкоуровневых угроз:
-          скрытых гипервизоров, атак драйверов, гипервизорных архитектур защиты,
-          мониторинга памяти и противодействия адаптирующимся нарушителям.
-        </p>
-        <p>
-          Книга рассматривает архитектуру ядра Windows, встроенные механизмы защиты ОС,
-          руткит-техники, методы обнаружения скрытых гипервизоров, VT-x, EPT,
-          MemoryRanger, MemoryMonRWX и AllMemPro.
-        </p>
-        <p>
-          Автор: Игорь Юрьевич Коркин, кандидат технических наук, исследователь
-          безопасности операционных систем, гипервизоров и низкоуровневых киберугроз.
-        </p>
-        <p>
-          Электронная версия доступна бесплатно на ZNANIUM, Google Books и в PDF.
-        </p>
-        <p>
-          <s>Печатная версия книги доступна в ИНФРА-М, Ozon, Wildberries и Yandex.Маркет.</s>
-          <strong>ПЕЧАТНЫЙ ТИРАЖ РАСПРОДАН</strong>
-        </p>
-        <nav aria-label="Ссылки на книгу">
-          <a href="https://znanium.ru/read?id=481477">Читать на ZNANIUM</a>
-          <a href="https://books.google.ru/books/about?id=sJD1EQAAQBAJ">Google Books</a>
-          <a href="/monograph/korkin-monograph.pdf">Открыть PDF</a>
-          <a href="https://github.com/IgorKorkin/monograph/releases/download/monograph-2026/korkin-monograph.pdf">Скачать PDF</a>
-          <a href="https://elibrary.ru/item.asp?id=91614175">eLIBRARY</a>
-          <a href="https://doi.org/10.12737/2228735">DOI</a>
-          <a href="https://infra-m.ru/catalog/informatika_vychislitelnaya_tekhnika/zashchita_yadra_operatsionnykh_sistem_v_usloviyakh_protivodeystviya/">ИНФРА-М</a>
-          <a href="https://www.ozon.ru/product/zashchita-yadra-operatsionnyh-sistem-v-usloviyakh-protivodeystviya-4030175118/">Ozon</a>
-          <a href="https://www.wildberries.ru/catalog/980328161/detail.aspx?targetUrl=GP">Wildberries</a>
-          <a href="https://market.yandex.ru/card/zashchita-yadra-operatsionnykh-sistem-v-usloviyakh-protivodeystviya-monografiyakorkin-i-yu-m-nits-infra-m2026-488-s16pereplet-7bts/5666301666?do-waremd5=cymUIlw809sRHomSS_s_NQ&amp;nid=20598950&amp;utm_medium=sharing&amp;ogV=188&amp;isComfortPlus=false">Yandex.Маркет</a>
-        </nav>
-      </main>
+</head>
+
+<body>
+  <noscript>
+    <div>
+      <img src="https://mc.yandex.ru/watch/108660171" style="position:absolute; left:-9999px;" alt="" />
+      <img src="/monograph/og-cover-800.webp" width="800" height="544"
+        alt="Игорь Коркин — Защита ядра операционных систем в условиях противодействия, монография"
+        style="max-width:100%; height:auto;" />
     </div>
 
-    <section class="citation-static" id="citation" aria-labelledby="citation-title">
-      <h2 id="citation-title">Как цитировать</h2>
+    <main>
+      <h1>Защита ядра операционных систем в условиях противодействия</h1>
+      <p>
+        Монография Игоря Юрьевича Коркина о защите ядра Windows от низкоуровневых угроз:
+        скрытых гипервизоров, атак драйверов, гипервизорных архитектур защиты,
+        мониторинга памяти и противодействия адаптирующимся нарушителям.
+      </p>
+      <p>
+        Книга рассматривает архитектуру ядра Windows, встроенные механизмы защиты ОС,
+        руткит-техники, методы обнаружения скрытых гипервизоров, VT-x, EPT,
+        MemoryRanger, MemoryMonRWX и AllMemPro.
+      </p>
+      <p>
+        Автор: Игорь Юрьевич Коркин, кандидат технических наук, исследователь
+        безопасности операционных систем, гипервизоров и низкоуровневых киберугроз.
+      </p>
+      <p>
+        Электронная версия доступна бесплатно на ZNANIUM, Google Books и в PDF.
+      </p>
+      <p>
+        <s>Печатная версия книги доступна в ИНФРА-М, Ozon, Wildberries и Yandex.Маркет.</s>
+        <strong>ПЕЧАТНЫЙ ТИРАЖ РАСПРОДАН</strong>
+      </p>
+      <nav aria-label="Ссылки на книгу">
+        <a href="https://znanium.ru/read?id=481477">Читать на ZNANIUM</a>
+        <a href="https://books.google.ru/books/about?id=sJD1EQAAQBAJ">Google Books</a>
+        <a href="/monograph/korkin-monograph.pdf">Открыть PDF</a>
+        <a href="https://github.com/IgorKorkin/monograph/releases/download/monograph-2026/korkin-monograph.pdf">Скачать
+          PDF</a>
+        <a href="https://elibrary.ru/item.asp?id=91614175">eLIBRARY</a>
+        <a href="https://doi.org/10.12737/2228735">DOI</a>
+        <a
+          href="https://infra-m.ru/catalog/informatika_vychislitelnaya_tekhnika/zashchita_yadra_operatsionnykh_sistem_v_usloviyakh_protivodeystviya/">ИНФРА-М</a>
+        <a
+          href="https://www.ozon.ru/product/zashchita-yadra-operatsionnyh-sistem-v-usloviyakh-protivodeystviya-4030175118/">Ozon</a>
+        <a href="https://www.wildberries.ru/catalog/980328161/detail.aspx?targetUrl=GP">Wildberries</a>
+        <a
+          href="https://market.yandex.ru/card/zashchita-yadra-operatsionnykh-sistem-v-usloviyakh-protivodeystviya-monografiyakorkin-i-yu-m-nits-infra-m2026-488-s16pereplet-7bts/5666301666?do-waremd5=cymUIlw809sRHomSS_s_NQ&amp;nid=20598950&amp;utm_medium=sharing&amp;ogV=188&amp;isComfortPlus=false">Yandex.Маркет</a>
+      </nav>
+    </main>
 
-      <div class="citation-static-grid">
-        <article class="citation-static-card">
-          <div class="citation-static-head">
-            <button class="citation-copy" type="button" data-copy-target="citation-ru">Copy</button>
-          </div>
-          <textarea id="citation-ru" aria-label="Цитирование монографии на русском языке" rows="3" readonly>Коркин, И. Ю. Защита ядра операционных систем в условиях противодействия : монография / И. Ю. Коркин. — Москва : ИНФРА-М, 2026. — 488 с. — ISBN 978-5-16-021527-3. — DOI: 10.12737/2228735. — EDN: MMFTWR</textarea>
-          <p class="citation-status" aria-live="polite"></p>
-        </article>
+  </noscript>
 
-        <article class="citation-static-card">
-          <div class="citation-static-head">
-            <button class="citation-copy" type="button" data-copy-target="citation-en">Copy</button>
-          </div>
-          <textarea id="citation-en" aria-label="Monograph citation in English" rows="3" readonly>Korkin, I. Yu. (2026). Kernel Protection of Operating Systems Under Countermeasures. Moscow, INFRA-M. ISBN 978-5-16-021527-3. — DOI: 10.12737/2228735</textarea>
-          <p class="citation-status" aria-live="polite"></p>
-        </article>
-      </div>
+  <div id="root"></div>
 
-      <div class="citation-source-links" aria-label="Источники библиографических данных">
-        <a href="https://znanium.ru/catalog/product/2228735" target="_blank" rel="noopener noreferrer">ZNANIUM product</a>
-        <a href="https://elibrary.ru/item.asp?id=91614175" target="_blank" rel="noopener noreferrer">eLIBRARY ID: 91614175</a>
-        <a href="https://www.elibrary.ru/item.asp?id=91614175" target="_blank" rel="noopener noreferrer">EDN: MMFTWR</a>
-        <a href="https://doi.org/10.12737/2228735" target="_blank" rel="noopener noreferrer">DOI: 10.12737/2228735</a>
-      </div>
-    </section>
+  <section class="citation-static" id="citation" aria-labelledby="citation-title">
+    <h2 id="citation-title">Как цитировать</h2>
 
-    <script>
-      (function initCitationBlock() {
-        const setupCopyButtons = () => {
-          document.querySelectorAll("[data-copy-target]").forEach((button) => {
-            button.addEventListener("click", async () => {
-              const target = document.getElementById(button.dataset.copyTarget);
-              const status = button.closest(".citation-static-card").querySelector(".citation-status");
+    <div class="citation-static-grid">
+      <article class="citation-static-card">
+        <div class="citation-static-head">
+          <button class="citation-copy" type="button" data-copy-target="citation-ru">Copy</button>
+        </div>
+        <textarea id="citation-ru" aria-label="Цитирование монографии на русском языке" rows="3"
+          readonly>Коркин, И. Ю. Защита ядра операционных систем в условиях противодействия : монография / И. Ю. Коркин. — Москва : ИНФРА-М, 2026. — 488 с. — ISBN 978-5-16-021527-3. — DOI: 10.12737/2228735. — EDN: MMFTWR</textarea>
+        <p class="citation-status" aria-live="polite"></p>
+      </article>
 
-              try {
-                await navigator.clipboard.writeText(target.value);
-                status.textContent = "Copied.";
-              } catch (error) {
-                target.focus();
-                target.select();
-                status.textContent = "Select and copy manually.";
-              }
-            });
+      <article class="citation-static-card">
+        <div class="citation-static-head">
+          <button class="citation-copy" type="button" data-copy-target="citation-en">Copy</button>
+        </div>
+        <textarea id="citation-en" aria-label="Monograph citation in English" rows="3"
+          readonly>Korkin, I. Yu. (2026). Kernel Protection of Operating Systems Under Countermeasures. Moscow, INFRA-M. ISBN 978-5-16-021527-3. — DOI: 10.12737/2228735</textarea>
+        <p class="citation-status" aria-live="polite"></p>
+      </article>
+    </div>
+
+    <div class="citation-source-links" aria-label="Источники библиографических данных">
+      <a href="https://znanium.ru/catalog/product/2228735" target="_blank" rel="noopener noreferrer">ZNANIUM product</a>
+      <a href="https://elibrary.ru/item.asp?id=91614175" target="_blank" rel="noopener noreferrer">eLIBRARY ID:
+        91614175</a>
+      <a href="https://www.elibrary.ru/item.asp?id=91614175" target="_blank" rel="noopener noreferrer">EDN: MMFTWR</a>
+      <a href="https://doi.org/10.12737/2228735" target="_blank" rel="noopener noreferrer">DOI: 10.12737/2228735</a>
+    </div>
+  </section>
+
+  <script>
+    (function initCitationBlock() {
+      const setupCopyButtons = () => {
+        document.querySelectorAll("[data-copy-target]").forEach((button) => {
+          button.addEventListener("click", async () => {
+            const target = document.getElementById(button.dataset.copyTarget);
+            const status = button.closest(".citation-static-card").querySelector(".citation-status");
+
+            try {
+              await navigator.clipboard.writeText(target.value);
+              status.textContent = "Copied.";
+            } catch (error) {
+              target.focus();
+              target.select();
+              status.textContent = "Select and copy manually.";
+            }
           });
-        };
+        });
+      };
 
-        const placeCitationBlock = () => {
-          const citation = document.getElementById("citation");
-          const heroText = document.querySelector(".hero-text");
-          const panels = heroText ? heroText.querySelectorAll(".marketplace-panel") : [];
+      const placeCitationBlock = () => {
+        const citation = document.getElementById("citation");
+        const heroText = document.querySelector(".hero-text");
+        const panels = heroText ? heroText.querySelectorAll(".marketplace-panel") : [];
 
-          if (citation && panels.length > 0) {
-            panels[panels.length - 1].after(citation);
-            return true;
-          }
+        if (citation && panels.length > 0) {
+          panels[panels.length - 1].after(citation);
+          return true;
+        }
 
-          return false;
-        };
+        return false;
+      };
 
-        const waitAndPlace = () => {
-          if (!placeCitationBlock()) {
-            window.requestAnimationFrame(waitAndPlace);
-          }
-        };
+      const waitAndPlace = () => {
+        if (!placeCitationBlock()) {
+          window.requestAnimationFrame(waitAndPlace);
+        }
+      };
 
-        setupCopyButtons();
-        waitAndPlace();
-      })();
-    </script>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+      setupCopyButtons();
+      waitAndPlace();
+    })();
+  </script>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
