@@ -11,7 +11,7 @@ const marketplaceLinks = {
     "https://infra-m.ru/catalog/informatika_vychislitelnaya_tekhnika/zashchita_yadra_operatsionnykh_sistem_v_usloviyakh_protivodeystviya/",
   ozon:
     "https://www.ozon.ru/product/zashchita-yadra-operatsionnyh-sistem-v-usloviyah-protivodeystviya-4030175118/",
-  wb: "https://www.wildberries.ru/catalog/980328161/detail.aspx?targetUrl=GP",  
+  wb: "https://www.wildberries.ru/catalog/980328161/detail.aspx?targetUrl=GP",
   yandexMarket:
     "https://market.yandex.ru/card/zashchita-yadra-operatsionnykh-sistem-v-usloviyakh-protivodeystviya-monografiyakorkin-i-yu-m-nits-infra-m2026-488-s16pereplet-7bts/5666301666?do-waremd5=cymUIlw809sRHomSS_s_NQ&nid=20598950&utm_medium=sharing&ogV=188&isComfortPlus=false",
   googleBooks: "https://books.google.ru/books/about?id=sJD1EQAAQBAJ",
@@ -992,20 +992,20 @@ export default function App() {
                       ? "Открыть страницу монографии на Znanium"
                       : "Open the monograph page on Znanium"
                   }
-                >            
-                    <img
-                      src="/monograph/og-cover-800.webp"
-                      srcSet="
+                >
+                  <img
+                    src="/monograph/og-cover-800.webp"
+                    srcSet="
                         /monograph/og-cover-600.webp 600w,
                         /monograph/og-cover-800.webp 800w,
                         /monograph/og-cover-1600.webp 1600w
                       "
-                      sizes="(max-width: 700px) 92vw, 800px"
-                      width="800"
-                      height="544"
-                      alt="Игорь Коркин — Защита ядра операционных систем в условиях противодействия, монография"
-                      fetchPriority="high"
-                    />
+                    sizes="(max-width: 700px) 92vw, 800px"
+                    width="800"
+                    height="544"
+                    alt="Игорь Коркин — Защита ядра операционных систем в условиях противодействия, монография"
+                    fetchPriority="high"
+                  />
                 </figure>
               </div>
 
@@ -1287,11 +1287,11 @@ export default function App() {
             </div>
           </section>
 
-          
+
 
           <footer className="footer">
             <div className="container">
-               <div className="footer-links">
+              <div className="footer-links">
               </div>
               <div className="footer-copy">{t.footer.copyright}</div>
             </div>
