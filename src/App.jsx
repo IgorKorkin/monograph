@@ -238,10 +238,6 @@ export default function App() {
         body {
           margin: 0;
           color: var(--text);
-          background:
-            radial-gradient(circle at 50% 18%, rgba(72, 211, 255, 0.14), transparent 30%),
-            radial-gradient(circle at 50% 65%, rgba(72, 211, 255, 0.05), transparent 38%),
-            #050a11;
           font-family: var(--sans);
           min-height: 100vh;
           overflow-x: hidden;
