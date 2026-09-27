@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-
+  
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LD6Z5H92Y7"></script>
   <script>
@@ -43,6 +43,19 @@
   <link rel="icon" href="/monograph/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/monograph/apple-touch-icon.png" />
 
+  <link
+    rel="preload"
+    as="image"
+    href="/monograph/og-cover-800.webp"
+    imagesrcset="
+      /monograph/og-cover-600.webp 600w,
+      /monograph/og-cover-800.webp 800w,
+      /monograph/og-cover-1600.webp 1600w
+    "
+    imagesizes="(max-width: 700px) 92vw, 800px"
+    fetchpriority="high"
+  />
+  
   <meta property="og:type" content="book" />
   <meta property="og:locale" content="ru_RU" />
   <meta property="og:site_name" content="OS Security as a Science" />
