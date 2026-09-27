@@ -993,7 +993,15 @@ export default function App() {
                   }
                 >
                   <img
-                    src={asset("og-cover.webp")}
+                    src={asset("og-cover-800.webp")}
+                    srcSet={`
+                      ${asset("og-cover-800.webp")} 800w,
+                      ${asset("og-cover-1600.webp")} 1600w
+                    `}
+                    sizes="(max-width: 840px) calc(100vw - 24px), 780px"
+                    width={800}
+                    height={544}
+                    fetchPriority="high"
                     alt={
                       lang === "ru"
                         ? "Полная обложка монографии с корешком"
