@@ -269,37 +269,11 @@ export default function App() {
         .header-inner {
           display: flex;
           align-items: center;
-          justify-content: space-between;
-          gap: 28px;
-          min-height: 72px;
-        }
-
-        .brand {
-          display: flex;
-          align-items: center;
-          gap: 16px;
-          min-width: 0;
-        }
-
-        .brand-mark {
-          font-family: var(--mono);
-          color: var(--accent);
-          font-size: 1.15rem;
-          letter-spacing: 0.03em;
-          font-weight: 700;
-          text-shadow: 0 0 16px rgba(72, 211, 255, 0.25);
-        }
-
-        .brand-text {
-          font-family: var(--mono);
-          font-size: 0.86rem;
-          letter-spacing: 0.24em;
-          color: var(--text-soft);
-          text-transform: uppercase;
-          white-space: nowrap;
+          min-height: 60px;
         }
 
         .nav {
+          width: 100%;
           display: flex;
           align-items: center;
           gap: 24px;
@@ -338,7 +312,7 @@ export default function App() {
         .lang-switch {
           display: flex;
           gap: 10px;
-          margin-left: 6px;
+          margin-left: auto;
         }
 
         .lang-btn {
@@ -842,9 +816,7 @@ export default function App() {
           }
 
           .header-inner {
-            flex-direction: column;
-            align-items: flex-start;
-            padding: 14px 0;
+            padding: 10px 0;
           }
 
           .nav {
@@ -900,11 +872,6 @@ export default function App() {
       <div className="app">
         <header className="header">
           <div className="container header-inner">
-            <div className="brand">
-              <div className="brand-mark">[KP]</div>
-              <div className="brand-text">Kernel Protection Monograph</div>
-            </div>
-
             <nav className="nav">
               <a href="#preview" className="active">{t.nav.preview}</a>
               <a href="#about">{t.nav.about}</a>
