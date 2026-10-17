@@ -220,13 +220,6 @@
       text-transform: uppercase;
     }
 
-    .citation-hint {
-      margin: 0 0 12px;
-      color: #aab6c8;
-      font-size: 0.86rem;
-      line-height: 1.5;
-    }
-
     .citation-static-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -389,14 +382,13 @@
 
   <section class="citation-static" id="citation" aria-labelledby="citation-title">
     <h2 id="citation-title">Как цитировать</h2>
-    <p class="citation-hint" id="citation-select-hint">Нажмите на текст — он выделится целиком. Затем скопируйте его или используйте кнопку Copy.</p>
 
     <div class="citation-static-grid">
       <article class="citation-static-card">
         <div class="citation-static-head">
           <button class="citation-copy" type="button" data-copy-target="citation-ru">Copy</button>
         </div>
-        <textarea id="citation-ru" aria-label="Цитирование монографии на русском языке" aria-describedby="citation-select-hint" rows="3"
+        <textarea id="citation-ru" aria-label="Цитирование монографии на русском языке" rows="3"
           readonly>Коркин, И. Ю. Защита ядра операционных систем в условиях противодействия : монография / И. Ю. Коркин. — Москва : ИНФРА-М, 2026. — 488 с. — ISBN 978-5-16-021527-3. — DOI: 10.12737/2228735. — EDN: MMFTWR</textarea>
         <p class="citation-status" aria-live="polite"></p>
       </article>
@@ -405,7 +397,7 @@
         <div class="citation-static-head">
           <button class="citation-copy" type="button" data-copy-target="citation-en">Copy</button>
         </div>
-        <textarea id="citation-en" aria-label="Monograph citation in English" aria-describedby="citation-select-hint" rows="3"
+        <textarea id="citation-en" aria-label="Monograph citation in English" rows="3"
           readonly>Korkin, I. Yu. (2026). Kernel Protection of Operating Systems Under Countermeasures. Moscow, INFRA-M. ISBN 978-5-16-021527-3. — DOI: 10.12737/2228735</textarea>
         <p class="citation-status" aria-live="polite"></p>
       </article>
