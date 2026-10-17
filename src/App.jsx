@@ -32,8 +32,8 @@ const content = {
       "Монография о защите ядра Windows от низкоуровневых угроз: скрытых гипервизорах, атаках драйверов, гипервизорных архитектурах защиты и мониторинге памяти в условиях активного противодействия.",
     by: "Игорь Коркин · кандидат технических наук",
     buttons: {
-      read: "ЧИТАТЬ НА ZNANIUM",
-      litres: "ЧИТАТЬ НА ЛИТРЕС",
+      read: "ZNANIUM",
+      litres: "ЛИТРЕС",
       googleBooks: "GOOGLE BOOKS",
       openPdf: "ОТКРЫТЬ PDF",
       downloadPdf: "СКАЧАТЬ PDF",
@@ -82,7 +82,7 @@ const content = {
     ],
     marketplace: {
       title: "Книга доступна на маркетплейсах",
-      digitalTitle: "Электронная версия доступна бесплатно",
+      digitalTitle: "Электронная версия доступна бесплатно:",
       soldOut: "ПЕЧАТНЫЙ ТИРАЖ РАСПРОДАН",
       infra: "ИНФРА-М",
       ozon: "Ozon",
@@ -123,8 +123,8 @@ const content = {
       "A monograph on Windows kernel protection against low-level threats: hidden hypervisors, driver-based attacks, hypervisor-based defensive architectures, and memory monitoring under active countermeasures.",
     by: "Igor Korkin · Ph.D.",
     buttons: {
-      read: "READ ON ZNANIUM",
-      litres: "READ ON LITRES",
+      read: "ZNANIUM",
+      litres: "LITRES",
       googleBooks: "GOOGLE BOOKS",
       openPdf: "OPEN PDF",
       downloadPdf: "DOWNLOAD PDF",
@@ -173,7 +173,7 @@ const content = {
     ],
     marketplace: {
       title: "The book is available on major marketplaces",
-      digitalTitle: "Digital edition is available for free",
+      digitalTitle: "Digital edition is available for free:",
       soldOut: "PRINT EDITION SOLD OUT",
       infra: "INFRA-M",
       ozon: "Ozon",
