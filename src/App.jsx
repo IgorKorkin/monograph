@@ -7,6 +7,8 @@ const pdfReleaseUrl =
 const pdfViewerUrl = asset("korkin-monograph.pdf");
 
 const marketplaceLinks = {
+  litres:
+    "https://www.litres.ru/book/igor-korkin/zaschita-yadra-operacionnyh-sistem-v-usloviyah-protivodeystviy-74604981/",
   infra:
     "https://infra-m.ru/catalog/informatika_vychislitelnaya_tekhnika/zashchita_yadra_operatsionnykh_sistem_v_usloviyakh_protivodeystviya/",
   ozon:
@@ -31,6 +33,7 @@ const content = {
     by: "Игорь Коркин · кандидат технических наук",
     buttons: {
       read: "ЧИТАТЬ НА ZNANIUM",
+      litres: "ЧИТАТЬ НА ЛИТРЕС",
       googleBooks: "GOOGLE BOOKS",
       openPdf: "ОТКРЫТЬ PDF",
       downloadPdf: "СКАЧАТЬ PDF",
@@ -79,7 +82,7 @@ const content = {
     ],
     marketplace: {
       title: "Книга доступна на маркетплейсах",
-      digitalTitle: "Электронная версия доступна бесплатно",
+      digitalTitle: "Электронная версия книги",
       soldOut: "ПЕЧАТНЫЙ ТИРАЖ РАСПРОДАН",
       infra: "ИНФРА-М",
       ozon: "Ozon",
@@ -121,6 +124,7 @@ const content = {
     by: "Igor Korkin · Ph.D.",
     buttons: {
       read: "READ ON ZNANIUM",
+      litres: "READ ON LITRES",
       googleBooks: "GOOGLE BOOKS",
       openPdf: "OPEN PDF",
       downloadPdf: "DOWNLOAD PDF",
@@ -169,7 +173,7 @@ const content = {
     ],
     marketplace: {
       title: "The book is available on major marketplaces",
-      digitalTitle: "Digital edition is available for free",
+      digitalTitle: "Digital edition of the book",
       soldOut: "PRINT EDITION SOLD OUT",
       infra: "INFRA-M",
       ozon: "Ozon",
@@ -1041,6 +1045,15 @@ export default function App() {
                       rel="noopener noreferrer"
                     >
                       {t.buttons.read}
+                    </a>
+
+                    <a
+                      className="btn btn-primary"
+                      href={marketplaceLinks.litres}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {t.buttons.litres}
                     </a>
 
                     <a
