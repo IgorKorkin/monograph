@@ -262,13 +262,24 @@
       min-height: 0;
       resize: vertical;
       padding: 9px 11px;
-      border: 1px solid rgba(108, 173, 214, 0.16);
+      border: 1px solid rgba(72, 211, 255, 0.32);
       border-radius: 12px;
-      background: rgba(5, 10, 17, 0.78);
+      background: rgba(72, 211, 255, 0.11);
       color: #e7eef8;
       font: inherit;
       font-size: 0.95rem;
       line-height: 1.55;
+      cursor: text;
+    }
+
+    .citation-static textarea:focus {
+      outline: 2px solid rgba(72, 211, 255, 0.42);
+      outline-offset: 2px;
+    }
+
+    .citation-static textarea::selection {
+      background: #237eaa;
+      color: #fff;
     }
 
     .citation-source-links {
@@ -403,6 +414,14 @@
 
   <script>
     (function initCitationBlock() {
+      const setupCitationSelection = () => {
+        document.querySelectorAll(".citation-static textarea").forEach((textarea) => {
+          const selectAll = () => textarea.select();
+          textarea.addEventListener("focus", selectAll);
+          textarea.addEventListener("click", selectAll);
+        });
+      };
+
       const setupCopyButtons = () => {
         document.querySelectorAll("[data-copy-target]").forEach((button) => {
           button.addEventListener("click", async () => {
@@ -441,6 +460,7 @@
         }
       };
 
+      setupCitationSelection();
       setupCopyButtons();
       waitAndPlace();
     })();
