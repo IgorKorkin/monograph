@@ -53,7 +53,7 @@ test("переключение RU и EN изменяет содержимое с
 
   await expect(
     page.getByRole("link", {
-      name: "READ ON ZNANIUM",
+      name: "ZNANIUM",
       exact: true,
     }),
   ).toBeVisible();
