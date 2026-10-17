@@ -82,7 +82,7 @@ const content = {
     ],
     marketplace: {
       title: "Книга доступна на маркетплейсах",
-      digitalTitle: "Электронная версия книги",
+      digitalTitle: "Электронная версия доступна бесплатно",
       soldOut: "ПЕЧАТНЫЙ ТИРАЖ РАСПРОДАН",
       infra: "ИНФРА-М",
       ozon: "Ozon",
@@ -173,7 +173,7 @@ const content = {
     ],
     marketplace: {
       title: "The book is available on major marketplaces",
-      digitalTitle: "Digital edition of the book",
+      digitalTitle: "Digital edition is available for free",
       soldOut: "PRINT EDITION SOLD OUT",
       infra: "INFRA-M",
       ozon: "Ozon",
