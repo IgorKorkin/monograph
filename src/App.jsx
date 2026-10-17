@@ -37,7 +37,6 @@ const content = {
       googleBooks: "GOOGLE BOOKS",
       openPdf: "ОТКРЫТЬ PDF",
       downloadPdf: "СКАЧАТЬ PDF",
-      site: "САЙТ АВТОРА",
     },
     tags: [
       "Windows Kernel",
@@ -128,7 +127,6 @@ const content = {
       googleBooks: "GOOGLE BOOKS",
       openPdf: "OPEN PDF",
       downloadPdf: "DOWNLOAD PDF",
-      site: "AUTHOR'S SITE",
     },
     tags: [
       "Windows Kernel",
@@ -1083,14 +1081,6 @@ export default function App() {
                       {t.buttons.downloadPdf}
                     </a>
 
-                    <a
-                      className="btn"
-                      href="https://igorkorkin.github.io/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {t.buttons.site}
-                    </a>
                   </div>
                 </div>
 
