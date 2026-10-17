@@ -102,13 +102,6 @@ const content = {
         text: "Методы обнаружения скрытых гипервизоров на основе анализа характеристик времени выполнения инструкций.",
       },
     ],
-    footer: {
-      publisher: "Издательство",
-      site: "Сайт автора",
-      linkedin: "LinkedIn",
-      x: "X",
-      copyright: "",
-    },
   },
   en: {
     nav: {
@@ -192,13 +185,6 @@ const content = {
         text: "Detection of stealth hypervisors through statistical analysis of instruction execution time characteristics.",
       },
     ],
-    footer: {
-      publisher: "Published by INFRA-M",
-      site: "Author Site",
-      linkedin: "LinkedIn",
-      x: "X",
-      copyright: "",
-    },
   },
 };
 
@@ -477,14 +463,6 @@ export default function App() {
           font-size: 0.98rem;
           color: var(--text);
           font-weight: 600;
-        }
-
-        .hero-note {
-          margin: 16px auto 0;
-          max-width: 760px;
-          color: var(--text-soft);
-          font-size: 0.95rem;
-          line-height: 1.7;
         }
 
         .button-row {
@@ -840,31 +818,12 @@ export default function App() {
           text-transform: uppercase;
         }
 
-        .footer {
-          padding: 44px 0 56px;
-          text-align: center;
-          color: var(--text-soft);
-          font-size: 0.96rem;
-          line-height: 1.9;
+        #contents {
+          scroll-margin-top: 96px;
         }
 
-        .footer-links {
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
-          gap: 14px;
-        }
-
-        .footer-links span {
-          opacity: 0.45;
-        }
-
-        .footer a {
-          color: var(--accent);
-        }
-
-        .footer-copy {
-          margin-top: 10px;
+        #author {
+          padding-bottom: 100px;
         }
 
         @media (max-width: 1080px) {
@@ -930,6 +889,10 @@ export default function App() {
 
           .author-card--single {
             max-width: 100%;
+          }
+
+          #contents {
+            scroll-margin-top: 170px;
           }
         }
       `}</style>
@@ -1138,8 +1101,6 @@ export default function App() {
                   </div>
                 </div>
 
-                <p className="hero-note">{t.trustNote}</p>
-
                 <div className="tag-row">
                   {t.tags.map((tag) => (
                     <span className="tag" key={tag}>
@@ -1162,7 +1123,7 @@ export default function App() {
                 ))}
               </div>
 
-              <div className="info-grid" id="contents">
+              <div className="info-grid">
                 <article className="info-card card">
                   <h3>{t.sectionTitles.about}</h3>
                   <p>{t.aboutText}</p>
@@ -1185,7 +1146,7 @@ export default function App() {
             </div>
           </section>
 
-          <section className="section">
+          <section className="section" id="contents">
             <div className="container">
               <h2 className="section-title">
                 {t.sectionTitles.inside}
@@ -1286,15 +1247,6 @@ export default function App() {
             </div>
           </section>
 
-
-
-          <footer className="footer">
-            <div className="container">
-              <div className="footer-links">
-              </div>
-              <div className="footer-copy">{t.footer.copyright}</div>
-            </div>
-          </footer>
         </main>
       </div>
     </>
