@@ -228,7 +228,7 @@
 
     .citation-static-card {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 72px;
+      grid-template-columns: minmax(0, 1fr) 106px;
       align-items: center;
       gap: 8px 12px;
       padding: 10px;
@@ -240,9 +240,14 @@
     .citation-copy {
       grid-column: 2;
       grid-row: 1;
-      width: 72px;
+      width: 106px;
       min-height: 36px;
       padding: 0 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      white-space: nowrap;
       border: 1px solid rgba(72, 211, 255, 0.24);
       border-radius: 9px;
       background: rgba(8, 16, 28, 0.64);
@@ -254,6 +259,34 @@
 
     .citation-copy:hover {
       border-color: rgba(72, 211, 255, 0.42);
+    }
+
+    .citation-copy:focus-visible {
+      outline: 2px solid rgba(72, 211, 255, 0.65);
+      outline-offset: 3px;
+    }
+
+    .citation-copy svg {
+      width: 16px;
+      height: 16px;
+      flex: none;
+    }
+
+    .citation-copy .citation-icon-check {
+      display: none;
+    }
+
+    .citation-copy.is-copied {
+      border-color: rgba(72, 211, 255, 0.35);
+      background: rgba(72, 211, 255, 0.11);
+    }
+
+    .citation-copy.is-copied .citation-icon-copy {
+      display: none;
+    }
+
+    .citation-copy.is-copied .citation-icon-check {
+      display: block;
     }
 
     .citation-static textarea {
@@ -305,19 +338,6 @@
       text-decoration: none;
     }
 
-    .citation-status {
-      grid-column: 1;
-      min-height: 0;
-      margin: 4px 0 0;
-      color: #aab6c8;
-      font-size: 0.76rem;
-      line-height: 1.25;
-    }
-
-    .citation-status:empty {
-      display: none;
-    }
-
     @media (max-width: 840px) {
       .citation-static {
         width: 100%;
@@ -327,12 +347,12 @@
 
     @media (max-width: 480px) {
       .citation-static-card {
-        grid-template-columns: minmax(0, 1fr) 64px;
+        grid-template-columns: minmax(0, 1fr) 96px;
         gap: 8px;
       }
 
       .citation-copy {
-        width: 64px;
+        width: 96px;
       }
     }
   </style>
@@ -400,17 +420,23 @@
 
     <div class="citation-static-grid">
       <article class="citation-static-card">
-        <textarea id="citation-ru" aria-label="Цитирование монографии на русском языке" rows="3"
+        <textarea id="citation-ru" aria-label="Цитирование монографии на русском языке" rows="2"
           readonly>Коркин, И. Ю. Защита ядра операционных систем в условиях противодействия : монография / И. Ю. Коркин. — Москва : ИНФРА-М, 2026. — 488 с. — ISBN 978-5-16-021527-3. — DOI: 10.12737/2228735. — EDN: MMFTWR</textarea>
-        <button class="citation-copy" type="button" data-copy-target="citation-ru">Copy</button>
-        <p class="citation-status" aria-live="polite"></p>
+        <button class="citation-copy" type="button" data-copy-target="citation-ru">
+          <svg class="citation-icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          <svg class="citation-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+          <span class="citation-copy-label" aria-live="polite">Copy</span>
+        </button>
       </article>
 
       <article class="citation-static-card">
-        <textarea id="citation-en" aria-label="Monograph citation in English" rows="3"
+        <textarea id="citation-en" aria-label="Monograph citation in English" rows="2"
           readonly>Korkin, I. Yu. (2026). Kernel Protection of Operating Systems Under Countermeasures. Moscow, INFRA-M. ISBN 978-5-16-021527-3. — DOI: 10.12737/2228735</textarea>
-        <button class="citation-copy" type="button" data-copy-target="citation-en">Copy</button>
-        <p class="citation-status" aria-live="polite"></p>
+        <button class="citation-copy" type="button" data-copy-target="citation-en">
+          <svg class="citation-icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          <svg class="citation-icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"></path></svg>
+          <span class="citation-copy-label" aria-live="polite">Copy</span>
+        </button>
       </article>
     </div>
 
@@ -427,9 +453,11 @@
     (function initCitationBlock() {
       const setupCitationSelection = () => {
         document.querySelectorAll(".citation-static textarea").forEach((textarea) => {
-          const selectAll = () => textarea.select();
-          textarea.addEventListener("focus", selectAll);
-          textarea.addEventListener("click", selectAll);
+          textarea.addEventListener("focus", () => {
+            window.requestAnimationFrame(() => {
+              if (document.activeElement === textarea) textarea.select();
+            });
+          }, { once: true });
         });
       };
 
@@ -437,15 +465,22 @@
         document.querySelectorAll("[data-copy-target]").forEach((button) => {
           button.addEventListener("click", async () => {
             const target = document.getElementById(button.dataset.copyTarget);
-            const status = button.closest(".citation-static-card").querySelector(".citation-status");
+            const label = button.querySelector(".citation-copy-label");
+            window.clearTimeout(button.copyResetTimer);
 
             try {
               await navigator.clipboard.writeText(target.value);
-              status.textContent = "Copied.";
+              button.classList.add("is-copied");
+              label.textContent = "Copied";
+              button.removeAttribute("title");
+              button.copyResetTimer = window.setTimeout(() => {
+                button.classList.remove("is-copied");
+                label.textContent = "Copy";
+              }, 1800);
             } catch (error) {
-              target.focus();
-              target.select();
-              status.textContent = "Select and copy manually.";
+              button.classList.remove("is-copied");
+              label.textContent = "Retry";
+              button.title = "Copy failed. Select the citation text manually.";
             }
           });
         });
