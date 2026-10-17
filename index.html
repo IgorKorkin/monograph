@@ -228,7 +228,7 @@
 
     .citation-static-card {
       display: grid;
-      grid-template-columns: 72px minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1fr) 72px;
       align-items: center;
       gap: 8px 12px;
       padding: 10px;
@@ -238,6 +238,8 @@
     }
 
     .citation-copy {
+      grid-column: 2;
+      grid-row: 1;
       width: 72px;
       min-height: 36px;
       padding: 0 8px;
@@ -255,6 +257,8 @@
     }
 
     .citation-static textarea {
+      grid-column: 1;
+      grid-row: 1;
       display: block;
       width: 100%;
       min-width: 0;
@@ -302,7 +306,7 @@
     }
 
     .citation-status {
-      grid-column: 2;
+      grid-column: 1;
       min-height: 0;
       margin: 4px 0 0;
       color: #aab6c8;
@@ -323,7 +327,7 @@
 
     @media (max-width: 480px) {
       .citation-static-card {
-        grid-template-columns: 64px minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr) 64px;
         gap: 8px;
       }
 
@@ -396,16 +400,16 @@
 
     <div class="citation-static-grid">
       <article class="citation-static-card">
-        <button class="citation-copy" type="button" data-copy-target="citation-ru">Copy</button>
         <textarea id="citation-ru" aria-label="Цитирование монографии на русском языке" rows="3"
           readonly>Коркин, И. Ю. Защита ядра операционных систем в условиях противодействия : монография / И. Ю. Коркин. — Москва : ИНФРА-М, 2026. — 488 с. — ISBN 978-5-16-021527-3. — DOI: 10.12737/2228735. — EDN: MMFTWR</textarea>
+        <button class="citation-copy" type="button" data-copy-target="citation-ru">Copy</button>
         <p class="citation-status" aria-live="polite"></p>
       </article>
 
       <article class="citation-static-card">
-        <button class="citation-copy" type="button" data-copy-target="citation-en">Copy</button>
         <textarea id="citation-en" aria-label="Monograph citation in English" rows="3"
           readonly>Korkin, I. Yu. (2026). Kernel Protection of Operating Systems Under Countermeasures. Moscow, INFRA-M. ISBN 978-5-16-021527-3. — DOI: 10.12737/2228735</textarea>
+        <button class="citation-copy" type="button" data-copy-target="citation-en">Copy</button>
         <p class="citation-status" aria-live="polite"></p>
       </article>
     </div>
