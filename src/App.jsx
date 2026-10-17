@@ -906,10 +906,8 @@ export default function App() {
             </div>
 
             <nav className="nav">
-              <a href="#about" className="active">
-                {t.nav.about}
-              </a>
-              <a href="#preview">{t.nav.preview}</a>
+              <a href="#preview" className="active">{t.nav.preview}</a>
+              <a href="#about">{t.nav.about}</a>
               <a href="#contents">{t.nav.contents}</a>
               <a href="#author">{t.nav.author}</a>
 
