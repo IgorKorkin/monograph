@@ -227,23 +227,22 @@
     }
 
     .citation-static-card {
-      padding: 11px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 72px;
+      align-items: center;
+      gap: 8px 12px;
+      padding: 10px;
       border: 1px solid rgba(108, 173, 214, 0.12);
       border-radius: 14px;
       background: rgba(11, 17, 27, 0.58);
     }
 
-    .citation-static-head {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 12px;
-      margin-bottom: 6px;
-    }
-
     .citation-copy {
-      min-height: 30px;
-      padding: 0 11px;
+      grid-column: 2;
+      grid-row: 1;
+      width: 72px;
+      min-height: 36px;
+      padding: 0 8px;
       border: 1px solid rgba(72, 211, 255, 0.24);
       border-radius: 9px;
       background: rgba(8, 16, 28, 0.64);
@@ -258,13 +257,17 @@
     }
 
     .citation-static textarea {
+      grid-column: 1;
+      grid-row: 1;
+      display: block;
       width: 100%;
+      min-width: 0;
       min-height: 0;
       resize: vertical;
       padding: 9px 11px;
       border: 1px solid rgba(72, 211, 255, 0.32);
       border-radius: 12px;
-      background: rgba(72, 211, 255, 0.11);
+      background: rgba(5, 10, 17, 0.78);
       color: #e7eef8;
       font: inherit;
       font-size: 0.95rem;
@@ -303,6 +306,7 @@
     }
 
     .citation-status {
+      grid-column: 1;
       min-height: 0;
       margin: 4px 0 0;
       color: #aab6c8;
@@ -318,6 +322,17 @@
       .citation-static {
         width: 100%;
         padding: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .citation-static-card {
+        grid-template-columns: minmax(0, 1fr) 64px;
+        gap: 8px;
+      }
+
+      .citation-copy {
+        width: 64px;
       }
     }
   </style>
@@ -385,20 +400,16 @@
 
     <div class="citation-static-grid">
       <article class="citation-static-card">
-        <div class="citation-static-head">
-          <button class="citation-copy" type="button" data-copy-target="citation-ru">Copy</button>
-        </div>
         <textarea id="citation-ru" aria-label="Цитирование монографии на русском языке" rows="3"
           readonly>Коркин, И. Ю. Защита ядра операционных систем в условиях противодействия : монография / И. Ю. Коркин. — Москва : ИНФРА-М, 2026. — 488 с. — ISBN 978-5-16-021527-3. — DOI: 10.12737/2228735. — EDN: MMFTWR</textarea>
+        <button class="citation-copy" type="button" data-copy-target="citation-ru">Copy</button>
         <p class="citation-status" aria-live="polite"></p>
       </article>
 
       <article class="citation-static-card">
-        <div class="citation-static-head">
-          <button class="citation-copy" type="button" data-copy-target="citation-en">Copy</button>
-        </div>
         <textarea id="citation-en" aria-label="Monograph citation in English" rows="3"
           readonly>Korkin, I. Yu. (2026). Kernel Protection of Operating Systems Under Countermeasures. Moscow, INFRA-M. ISBN 978-5-16-021527-3. — DOI: 10.12737/2228735</textarea>
+        <button class="citation-copy" type="button" data-copy-target="citation-en">Copy</button>
         <p class="citation-status" aria-live="polite"></p>
       </article>
     </div>
