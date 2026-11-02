@@ -344,6 +344,44 @@ export default function App() {
           text-align: center;
         }
 
+        .domain-wordmark {
+          margin: 0 0 22px;
+          text-align: center;
+        }
+
+        .domain-wordmark a {
+          display: inline-block;
+          max-width: 100%;
+          font-family: "Poiret One", var(--sans);
+          font-size: clamp(1rem, 1.65vw, 1.375rem);
+          font-weight: 400;
+          letter-spacing: 0.14em;
+          line-height: 1.5;
+          color: #c5d1db;
+          transition: color 0.2s ease;
+          overflow-wrap: anywhere;
+        }
+
+        .domain-wordmark a:hover {
+          color: var(--accent);
+        }
+
+        .domain-wordmark a:focus-visible {
+          outline: 2px solid var(--accent);
+          outline-offset: 5px;
+        }
+
+        @media (max-width: 600px) {
+          .domain-wordmark {
+            margin-bottom: 18px;
+          }
+
+          .domain-wordmark a {
+            font-size: 1rem;
+            letter-spacing: 0.10em;
+          }
+        }
+
         .book-strip {
           display: flex;
           justify-content: center;
@@ -901,6 +939,11 @@ export default function App() {
         <main>
           <section className="hero">
             <div className="container">
+              <div className="domain-wordmark">
+                <a href="https://защита-ядра.рф/" aria-label="Защита-ядра.рф — короткий адрес монографии">
+                  ЗАЩИТА-ЯДРА.РФ
+                </a>
+              </div>
               <div className="book-strip" id="preview">
                 <figure
                   className="cover cover--full"
