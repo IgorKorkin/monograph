@@ -1083,16 +1083,6 @@ export default function App() {
                   </div>
                 </div>
 
-                {lifetimeStats && (
-                  <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "12px 32px", margin: "18px 0", fontFamily: "var(--mono)", color: "var(--text-soft)", fontSize: "0.8rem" }}
-                    aria-label={lang === "ru" ? "Статистика за всё время" : "Lifetime statistics"}
-                    title={lang === "ru" ? "Посетители по Метрике; скачивания через GitHub Releases" : "Metrica visitors; GitHub Releases downloads"}>
-                    <span><strong style={{ color: "var(--accent)" }}>{lifetimeStats.visitors.toLocaleString(lang)}</strong> {lang === "ru" ? "посетителей" : "visitors"}</span>
-                    <span><strong style={{ color: "var(--accent)" }}>{lifetimeStats.downloads.toLocaleString(lang)}</strong> {lang === "ru" ? "скачиваний PDF (GitHub)" : "PDF downloads (GitHub)"}</span>
-                    <span>{lang === "ru" ? "за всё время" : "all time"}</span>
-                  </div>
-                )}
-
                 <div className="tag-row">
                   {t.tags.map((tag) => (
                     <span className="tag" key={tag}>
@@ -1240,6 +1230,23 @@ export default function App() {
           </section>
 
         </main>
+          {lifetimeStats && (
+            <footer className="container" style={{ padding: "24px 16px 40px", textAlign: "center", fontFamily: "var(--mono)", color: "var(--text-soft)", borderTop: "1px solid rgba(108, 173, 214, 0.14)" }}
+              aria-label={lang === "ru" ? "Статистика за всё время" : "Lifetime statistics"}
+              title={lang === "ru" ? "Посетители по Метрике; скачивания через GitHub Releases" : "Metrica visitors; GitHub Releases downloads"}>
+              <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "20px 48px" }}>
+                <div>
+                  <strong style={{ display: "block", color: "var(--accent)", fontSize: "1.6rem", fontVariantNumeric: "tabular-nums" }}>{lifetimeStats.visitors.toLocaleString(lang)}</strong>
+                  <span style={{ fontSize: "0.8rem" }}>{lang === "ru" ? "посетителей" : "visitors"}</span>
+                </div>
+                <div>
+                  <strong style={{ display: "block", color: "var(--accent)", fontSize: "1.6rem", fontVariantNumeric: "tabular-nums" }}>{lifetimeStats.downloads.toLocaleString(lang)}</strong>
+                  <span style={{ fontSize: "0.8rem" }}>{lang === "ru" ? "скачиваний PDF (GitHub)" : "PDF downloads (GitHub)"}</span>
+                </div>
+              </div>
+              <div style={{ marginTop: 12, fontSize: "0.75rem" }}>{lang === "ru" ? "за всё время" : "all time"}</div>
+            </footer>
+          )}
       </div>
     </>
   );
