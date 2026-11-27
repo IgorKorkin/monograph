@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const asset = (name) => `${import.meta.env.BASE_URL}${name}`;
 
@@ -191,6 +191,23 @@ const content = {
 export default function App() {
   const [lang, setLang] = useState("ru");
   const t = content[lang];
+  const [lifetimeStats, setLifetimeStats] = useState(null);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    fetch(asset("lifetime-stats.json"), { signal: controller.signal })
+      .then((response) => {
+        if (!response.ok) throw new Error("Statistics unavailable");
+        return response.json();
+      })
+      .then((data) => {
+        if ([data.visitors, data.downloads].every((value) => Number.isSafeInteger(value) && value >= 0)) {
+          setLifetimeStats(data);
+        }
+      })
+      .catch(() => {});
+    return () => controller.abort();
+  }, []);
 
   return (
     <>
@@ -1065,6 +1082,16 @@ export default function App() {
 
                   </div>
                 </div>
+
+                {lifetimeStats && (
+                  <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "12px 32px", margin: "18px 0", fontFamily: "var(--mono)", color: "var(--text-soft)", fontSize: "0.8rem" }}
+                    aria-label={lang === "ru" ? "Статистика за всё время" : "Lifetime statistics"}
+                    title={lang === "ru" ? "Посетители по Метрике; скачивания через GitHub Releases" : "Metrica visitors; GitHub Releases downloads"}>
+                    <span><strong style={{ color: "var(--accent)" }}>{lifetimeStats.visitors.toLocaleString(lang)}</strong> {lang === "ru" ? "посетителей" : "visitors"}</span>
+                    <span><strong style={{ color: "var(--accent)" }}>{lifetimeStats.downloads.toLocaleString(lang)}</strong> {lang === "ru" ? "скачиваний PDF (GitHub)" : "PDF downloads (GitHub)"}</span>
+                    <span>{lang === "ru" ? "за всё время" : "all time"}</span>
+                  </div>
+                )}
 
                 <div className="tag-row">
                   {t.tags.map((tag) => (
