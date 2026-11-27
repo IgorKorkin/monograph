@@ -8,7 +8,7 @@ on:
     - cron: '23 3 * * *'
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -19,6 +19,10 @@ concurrency:
 jobs:
   build:
     if: github.ref == 'refs/heads/main'
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -46,6 +50,7 @@ jobs:
         continue-on-error: true
 
       - name: Persist latest successful snapshot
+        continue-on-error: true
         run: |
           if ! git diff --quiet -- public/lifetime-stats.json; then
             git config user.name 'github-actions[bot]'
